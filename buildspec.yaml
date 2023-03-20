@@ -1,0 +1,31 @@
+version: 0.2
+phases:
+  pre_build:
+    commands:
+      - echo Logging in to Amazon ECR...
+      - aws ecr get-login-password --region $AWS_DEFAULT_REGION | docker login --username AWS --password-stdin $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com
+  build:
+    commands:
+      - IMAGE_TAG=$CODEBUILD_BUILD_NUMBER
+      - echo $IMAGE_TAG
+      - echo Build started on `date`
+      - echo Building the Docker image... 
+      - echo "image" $IMAGE_REPO
+      - sed -i "s%_REACT_APP_BASEURL%${REACT_APP_BASEURL}%g;" "Dockerfile"
+      - docker build -t $IMAGE_REPO:$IMAGE_TAG .
+      - docker tag $IMAGE_REPO:$IMAGE_TAG $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$IMAGE_REPO:$IMAGE_TAG
+  post_build:
+    commands:
+      - echo Build completed on `date`
+      - echo Pushing the Docker image...
+      - docker push $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$IMAGE_REPO:$IMAGE_TAG
+      - CREDENTIALS=$(aws sts assume-role --role-arn arn:aws:iam::$AWS_ACCOUNT_ID:role/aimfit-eks-cluster-service-role --role-session-name aimfit-eks-cluster-service-role --duration-seconds 900)
+      - export AWS_ACCESS_KEY_ID="$(echo ${CREDENTIALS} | jq -r '.Credentials.AccessKeyId')"
+      - export AWS_SECRET_ACCESS_KEY="$(echo ${CREDENTIALS} | jq -r '.Credentials.SecretAccessKey')"
+      - export AWS_SESSION_TOKEN="$(echo ${CREDENTIALS} | jq -r '.Credentials.SessionToken')"
+      - export AWS_EXPIRATION=$(echo ${CREDENTIALS} | jq -r '.Credentials.Expiration')
+      - aws sts get-caller-identity
+      - sed -i "s%_IMAGE_REPO%${IMAGE_REPO}%g;s%_AWS_DEFAULT_REGION%${AWS_DEFAULT_REGION}%g;s%_AWS_ACCOUNT_ID%${AWS_ACCOUNT_ID}%g;s%_IMAGE_TAG%${IMAGE_TAG}%g;s%_NAMESPACE%$NAMESPACE%g;s%_REPLICAS%${REPLICAS}%g;s%_REACT_APP_BASE_URI%${REACT_APP_BASE_URI}%g;" "k8s/deployment.yaml"
+      - cat k8s/deployment.yaml
+      - aws eks update-kubeconfig --region $AWS_DEFAULT_REGION --name $CLUSTER_NAME
+      - kubectl apply -f k8s/deployment.yaml      

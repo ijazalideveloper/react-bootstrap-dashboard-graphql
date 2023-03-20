@@ -1,0 +1,348 @@
+.form-group-switch {
+  height: 100%;
+
+  align-items: center;
+}
+
+.card label.custom-control-label {
+  padding-left: 0.8rem;
+
+  &::before {
+    width: 2.5rem;
+    border-radius: 0px;
+    height: 1.4rem;
+    top: -1px;
+  }
+  &::after {
+    width: 0.8rem;
+    border-radius: 0px;
+    height: 1.1rem;
+    top: 1px;
+  }
+}
+.diet-plan-dates-table {
+  .col {
+    padding: 1rem;
+    &.th {
+      font-size: inherit;
+      text-transform: uppercase;
+      font-weight: 700;
+      border-top: 2px solid #dee2e6;
+      text-align: left !important;
+    }
+  }
+  .head-row {
+    &:hover {
+      cursor: pointer;
+      color: #212529;
+      background-color: #f6f9fc;
+    }
+    .col {
+      border-top: 1px solid #dee2e6;
+    }
+    .editBtn {
+      color: #78c043;
+    }
+  }
+}
+.diet-plan-shifts {
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08) !important;
+}
+div {
+  &.collapsed {
+    margin: 0px -15px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08) !important;
+  }
+}
+.custom-switch .custom-control-input:checked ~ .custom-control-label::after {
+  transform: translateX(1.4rem);
+}
+input[type="checkbox" i]:focus {
+  outline-offset: 0px;
+}
+.custom-control-input:checked ~ .custom-control-label::before {
+  background-color: $primary-color;
+  border-color: $primary-color;
+}
+.custom-control-input:focus ~ .custom-control-label::before {
+  box-shadow: none;
+}
+.toggleWrapper {
+  position: relative;
+  transition: all 0.3s ease-in;
+  width: 70%;
+  height: 35px;
+  background-color: #3e5569;
+  border-radius: 0px 20px 20px 0px;
+  border: 2px solid #e9e2d0;
+
+  input {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    opacity: 0;
+  }
+
+  .toggle {
+    transition: all 1.5s ease-in-out;
+    position: absolute;
+    top: 6px;
+    left: 9px;
+    height: 20px;
+    width: 20px;
+    background-color: gray;
+    transform: rotate(0deg);
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    &:before {
+      position: absolute;
+      content: "";
+      height: 2px;
+      background: #fff;
+      width: 15px;
+      transform: rotate(-45deg) translate(-4px, 8px);
+    }
+    &:after {
+      position: absolute;
+      height: 2px;
+      content: "";
+      background: #fff;
+      width: 15px;
+      transform: rotate(45deg) translate(8px, 4px);
+    }
+  }
+
+  input:checked {
+    & + .toggle {
+      background-color: #87cb16;
+      height: 20px;
+      width: 20px;
+      border-radius: 50%;
+      top: 5px;
+      left: 60px;
+      transform: rotate(360deg);
+      box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.75);
+      &::before,
+      &:after {
+        position: absolute;
+        content: "";
+        height: 2px;
+        border-radius: 10px;
+        background: #fff;
+        transition: 0.4s ease;
+      }
+      &:before {
+        content: "";
+        width: 13px;
+        transform: rotate(-45deg) translate(-3px, 10px);
+      }
+      &:after {
+        content: "";
+        width: 7px;
+        transform: rotate(45deg) translate(9px, 6px);
+      }
+    }
+  }
+}
+
+.team-listing {
+  .form-group {
+    margin-bottom: 0px;
+  }
+  .form-control {
+    border: none;
+  }
+}
+.alert span[data-notify="icon"] {
+  position: unset !important;
+  font-size: 15px !important;
+  margin-top: 0px !important;
+}
+
+.rna-container .alert {
+  border-radius: 4px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 6px;
+}
+.alert.alert-with-icon {
+  padding-left: 0px !important;
+}
+
+.alert .close ~ span {
+  display: block;
+  max-width: 89%;
+  padding-left: 10px;
+}
+.recipe-tag-item {
+  background-color: #eef5f9;
+  font-size: 14px;
+  border-radius: 10px;
+  padding: 8px 10px;
+  display: inline-flex;
+  align-items: center;
+  margin: 0 0.3rem 0.3rem 0;
+  .step {
+    max-width: 92%;
+  }
+}
+
+.recipe-tag-item > .button {
+  background-color: #87cb16;
+  color: #fff;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  margin-left: 10px;
+  font-weight: bold;
+  padding: 0;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* === Wrapper Styles === */
+
+.file-upload-wrapper {
+  // padding: 10px;
+  // box-shadow: 0 0px 20px rgba(0, 0, 0, 0.1), 0 15px 12px rgba(0, 0, 0, 0);
+
+  // border-radius: 10px;
+
+  /* === Upload Box === */
+  .upload {
+    padding: 7px 10px;
+    border: 2px dashed #e6f5e9;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .upload p {
+    margin: 0px;
+    line-height: 0;
+    font-size: 14px;
+    color: #0c3214;
+    width: 100%;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .upload__button {
+    background-color: #e6f5e9;
+    border-radius: 8px;
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+
+  .upload__button:hover {
+    cursor: pointer;
+    opacity: 0.8;
+  }
+
+  /* === Uploaded Files === */
+  .uploaded {
+    padding: 10px;
+    position: relative;
+    background-color: #e6f5e9;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .file {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
+    width: 100%;
+    .d-flex {
+      width: 80%;
+    }
+  }
+  .uploaded .progress {
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    height: 5px;
+  }
+
+  .file-name {
+    color: #0c3214;
+    white-space: nowrap;
+    overflow: hidden !important;
+    text-overflow: ellipsis;
+  }
+  .fa-times:hover {
+    cursor: pointer;
+    opacity: 0.8;
+  }
+  .far {
+    padding-right: 15px;
+    font-size: 30px;
+    color: #0c3214;
+  }
+  input[type="file"] {
+    opacity: 0;
+    width: 90%;
+    cursor: pointer;
+    position: absolute;
+  }
+}
+.daterangepicker {
+  top: 25% !important;
+}
+.daterangepicker.opensright:before,
+.daterangepicker.opensright::after {
+  display: none;
+}
+.instructor-dashboard {
+  .dashboard-user-number {
+    font-size: 24px;
+    font-weight: 700;
+    text-shadow: 1px 2px #c4c4c4;
+    padding-right: 15px;
+    margin-right: 15px;
+    position: relative;
+    &:after {
+      content: "";
+      height: 25px;
+      width: 1px;
+      background: #c4c4c4;
+      position: absolute;
+      top: 5px;
+      right: 0px;
+    }
+  }
+  .user-name {
+    font-size: 18px;
+    color: #87cb16;
+  }
+  .classes {
+    position: relative;
+    padding-right: 5px;
+    margin-right: 5px;
+    &:after {
+      content: "";
+      height: 15px;
+      width: 1px;
+
+      background: #c4c4c4;
+      position: absolute;
+      top: 2px;
+      right: 0;
+    }
+  }
+}

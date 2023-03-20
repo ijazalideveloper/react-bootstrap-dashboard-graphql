@@ -1,0 +1,65 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: aimfit-fe-deployment
+  namespace: _NAMESPACE
+  labels:
+    app: aimfit-fe
+spec:
+  replicas: _REPLICAS
+  selector:
+    matchLabels:
+      app: aimfit-fe
+  template:
+    metadata:
+      labels:
+        app: aimfit-fe
+    spec:
+      containers:
+      - name: aimfit-fe
+        image: _AWS_ACCOUNT_ID.dkr.ecr._AWS_DEFAULT_REGION.amazonaws.com/_IMAGE_REPO:_IMAGE_TAG
+        ports:
+        - containerPort: 8080
+        livenessProbe:
+          failureThreshold: 3
+          httpGet:
+            httpHeaders:
+            - name: Custom-Header
+              value: Awesome
+            path: /
+            port: 8080
+            scheme: HTTP
+          initialDelaySeconds: 5
+          periodSeconds: 10
+          successThreshold: 1
+          timeoutSeconds: 60
+        name: aimfit-fe
+        readinessProbe:
+          failureThreshold: 3
+          httpGet:
+            httpHeaders:
+            - name: Custom-Header
+              value: Awesome
+            path: /
+            port: 8080
+            scheme: HTTP
+          initialDelaySeconds: 5
+          periodSeconds: 10
+          successThreshold: 1
+          timeoutSeconds: 60
+        env:
+        - name: REACT_APP_BASEURL
+          value: _REACT_APP_BASE_URI
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: aimfit-fe-service
+  namespace: _NAMESPACE
+spec:
+  selector:
+    app: aimfit-fe
+  ports:
+     - port: 80
+       targetPort: 8080
+       protocol: TCP
