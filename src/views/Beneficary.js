@@ -127,21 +127,27 @@ function Beneficary() {
                       </Form.Group>
                     </Col>
                     <Col className="px-1" md="4">
-                      <Form.Group>
-                        <label>Type</label>
-                        <Form.Control
-                          placeholder="Type"
-                          type="text"
-                        ></Form.Control>
+                    <Form.Group>
+                        <label class="form-check-label">Type</label>
+                        <Col className="pr-1" md="12">
+                          <select class="custom-select" id="gender2">
+                            <option selected>Choose...</option>
+                            <option value="1">Institution</option>
+                            <option value="2">Institution 1</option>
+                          </select>
+                        </Col>
                       </Form.Group>
                     </Col>
                     <Col className="px-1" md="4">
-                      <Form.Group>
-                        <label>Sub Type</label>
-                        <Form.Control
-                          placeholder="Type"
-                          type="text"
-                        ></Form.Control>
+                    <Form.Group>
+                        <label class="form-check-label">Sub Type</label>
+                        <Col className="pr-1" md="12">
+                          <select class="custom-select" id="gender2">
+                            <option selected>Choose...</option>
+                            <option value="1">Out Patient</option>
+                            <option value="2">Institution 1</option>
+                          </select>
+                        </Col>
                       </Form.Group>
                     </Col>
                   </Row>
@@ -185,21 +191,27 @@ function Beneficary() {
                       </Form.Group>
                     </Col>
                     <Col className="px-1" md="4">
-                      <Form.Group>
-                        <label>Payee Type</label>
-                        <Form.Control
-                          placeholder="Eligibility Response Identifier(URL)"
-                          type="text"
-                        ></Form.Control>
+                    <Form.Group>
+                        <label class="form-check-label">Payee Type</label>
+                        <Col className="pr-1" md="12">
+                          <select class="custom-select" id="gender2">
+                            <option selected>Choose...</option>
+                            <option value="1">Institution</option>
+                            <option value="2">Institution 1</option>
+                          </select>
+                        </Col>
                       </Form.Group>
                     </Col>
                     <Col className="px-1" md="4">
-                      <Form.Group>
-                        <label>Payee</label>
-                        <Form.Control
-                          placeholder="Offline Eligibility ID"
-                          type="text"
-                        ></Form.Control>
+                    <Form.Group>
+                        <label class="form-check-label">Payee</label>
+                        <Col className="pr-1" md="12">
+                          <select class="custom-select" id="gender2">
+                            <option selected>Choose...</option>
+                            <option value="1">Institution</option>
+                            <option value="2">Institution 1</option>
+                          </select>
+                        </Col>
                       </Form.Group>
                     </Col>
                   </Row>
@@ -214,12 +226,15 @@ function Beneficary() {
                       </Form.Group>
                     </Col>
                     <Col className="px-1" md="4">
-                      <Form.Group>
-                        <label>Referring provider</label>
-                        <Form.Control
-                          placeholder="Referring provider"
-                          type="text"
-                        ></Form.Control>
+                    <Form.Group>
+                        <label class="form-check-label">Referring provider</label>
+                        <Col className="pr-1" md="12">
+                          <select class="custom-select" id="gender2">
+                            <option selected>Choose...</option>
+                            <option value="1">Institution</option>
+                            <option value="2">Institution 1</option>
+                          </select>
+                        </Col>
                       </Form.Group>
                     </Col>
                   </Row>
