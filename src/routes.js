@@ -18,6 +18,7 @@
 import Dashboard from "views/Dashboard.js";
 import UserProfile from "views/UserProfile.js";
 import Providers from './views/Providers';
+import Beneficary from './views/Beneficary';
 
 const dashboardRoutes = [
   {
@@ -39,6 +40,13 @@ const dashboardRoutes = [
     name: "Providers",
     icon: "nc-icon nc-circle-09",
     component: Providers,
+    layout: "/admin"
+  },
+  {
+    path: "/beneficary",
+    name: "Beneficary",
+    icon: "nc-icon nc-circle-09",
+    component: Beneficary,
     layout: "/admin"
   },
 ];
