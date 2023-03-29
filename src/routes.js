@@ -20,6 +20,8 @@ import UserProfile from "views/UserProfile.js";
 import Providers from './views/Providers';
 import Beneficary from './views/Beneficary';
 
+import AddProvider from "views/Providers/AddProvider";
+
 const dashboardRoutes = [
   {
     path: "/dashboard",
@@ -36,10 +38,10 @@ const dashboardRoutes = [
     layout: "/admin"
   },
   {
-    path: "/providers",
-    name: "Providers",
+    path: "/add-provider",
+    name: "Add Provider",
     icon: "nc-icon nc-circle-09",
-    component: Providers,
+    component: AddProvider,
     layout: "/admin"
   },
   {
