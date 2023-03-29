@@ -22,78 +22,92 @@ function Beneficary() {
           <Col md="12">
             <Card>
               <Card.Header>
-                <Card.Title as="h4">Beneficary Info</Card.Title>
+                <Card.Title as="h4">
+                  <b>Beneficary Info</b>
+                </Card.Title>
               </Card.Header>
               <Card.Body>
                 <Form>
                   <Row>
                     <Col className="pr-1" md="5">
                       <Form.Group>
-                        {["radio"].map((type) => (
-                          <div key={`default-${type}`} className="mb-3">
-                            <Form.Check
-                              type={type}
-                              id={`default-${type}`}
-                              label={`default ${type}`}
-                            />
-                          </div>
-                        ))}
+                        <div class="form-check d-flex justify-content-start align-items-center">
+                          <input
+                            style={{ marginTop: "-1px" }}
+                            class="form-check-input"
+                            type="radio"
+                            name="flexRadioDefault"
+                            id="flexRadioDefault1"
+                          />
+                          <label
+                            style={{ paddingLeft: "4px" }}
+                            class="form-check-label"
+                            for="flexRadioDefault1"
+                          >
+                            {" "}
+                            New Born{" "}
+                          </label>
+                        </div>
                       </Form.Group>
                     </Col>
                   </Row>
-                  <Card.Title as="h4">Select a Beneficary</Card.Title>
                   <Row className="justify-content-between">
                     <Col className="pr-1" md="5">
-                      <Form.Group>
-                        <label>Username</label>
-                        <Form.Control
-                          defaultValue="michael23"
-                          placeholder="Username"
+                      <div class="input-group">
+                        <input
                           type="text"
-                        ></Form.Control>
-                      </Form.Group>
+                          class="form-control"
+                          placeholder="Search this blog"
+                        />
+                        <div class="input-group-append">
+                          <button
+                            class="btn btn-secondary search_btn_beneficary"
+                            type="button"
+                          >
+                            <i class="fa fa-search"></i>
+                          </button>
+                        </div>
+                      </div>
                     </Col>
-                    <Button
-                    className="btn-fill float-right mr-4"
-                    type="submit"
-                    variant="info"
-                  >
-                    Create New Beneficary
-                  </Button>
+                    <Col
+                      className="pr-1 d-flex justify-content-start align-items-center"
+                      md="2"
+                    >
+                      <label
+                        style={{ paddingLeft: "4px" }}
+                        class="form-check-label"
+                        for="flexRadioDefault1"
+                      >
+                        {" "}
+                        OR{" "}
+                      </label>
+                    </Col>
+                    <Col className="pr-1" md="5">
+                      <Button
+                        className="btn-fill float-right mr-4"
+                        type="submit"
+                        variant="info"
+                      >
+                        Create New Beneficary
+                      </Button>
+                    </Col>
                   </Row>
                   <Row>
                     <Col className="pr-1" md="5">
                       <Form.Group>
-                        {["radio"].map((type) => (
-                          <div key={`default-${type}`} className="mb-3">
-                            <Form.Check
-                              type={type}
-                              id={`default-${type}`}
-                              label={`default ${type}`}
-                            />
-                          </div>
-                        ))}
+                        <label class="form-check-label">Insurance Plans</label>
+                        <Col className="pr-1" md="12">
+                          <select class="custom-select" id="gender2">
+                            <option selected>Choose...</option>
+                            <option value="1">Male</option>
+                            <option value="2">Female</option>
+                          </select>
+                        </Col>
                       </Form.Group>
                     </Col>
                   </Row>
-                  <Row>
-                  <Col className="px-1" md="6">
-                      <Form.Group>
-                        <label>Insurance Plans</label>
-                        <Form.Select aria-label="Default select example">
-                          <option>Open this select menu</option>
-                          <option value="1">One</option>
-                          <option value="2">Two</option>
-                          <option value="3">Three</option>
-                        </Form.Select>
-                      </Form.Group>
-                    </Col>
-                   
-                    </Row>
-                
                 </Form>
               </Card.Body>
-              
             </Card>
 
             <Card>
@@ -107,7 +121,6 @@ function Beneficary() {
                       <Form.Group>
                         <label>Date Ordered</label>
                         <Form.Control
-                        
                           placeholder="Date Ordered"
                           type="date"
                         ></Form.Control>
@@ -117,7 +130,6 @@ function Beneficary() {
                       <Form.Group>
                         <label>Type</label>
                         <Form.Control
-                
                           placeholder="Type"
                           type="text"
                         ></Form.Control>
@@ -127,7 +139,6 @@ function Beneficary() {
                       <Form.Group>
                         <label>Sub Type</label>
                         <Form.Control
-                
                           placeholder="Type"
                           type="text"
                         ></Form.Control>
@@ -139,7 +150,6 @@ function Beneficary() {
                       <Form.Group>
                         <label>Eligibility Response Identifier(value)</label>
                         <Form.Control
-                        
                           placeholder="Eligibility Response Identifier"
                           type="text"
                         ></Form.Control>
@@ -149,7 +159,6 @@ function Beneficary() {
                       <Form.Group>
                         <label>Eligibility Response Identifier (URL)</label>
                         <Form.Control
-                
                           placeholder="Eligibility Response Identifier(URL)"
                           type="text"
                         ></Form.Control>
@@ -159,7 +168,6 @@ function Beneficary() {
                       <Form.Group>
                         <label>Offline Eligibility ID</label>
                         <Form.Control
-                
                           placeholder="Offline Eligibility ID"
                           type="text"
                         ></Form.Control>
@@ -171,7 +179,6 @@ function Beneficary() {
                       <Form.Group>
                         <label>Offline Eligibility Date</label>
                         <Form.Control
-                        
                           placeholder="Offline Eligibility Date"
                           type="date"
                         ></Form.Control>
@@ -181,7 +188,6 @@ function Beneficary() {
                       <Form.Group>
                         <label>Payee Type</label>
                         <Form.Control
-                
                           placeholder="Eligibility Response Identifier(URL)"
                           type="text"
                         ></Form.Control>
@@ -191,7 +197,6 @@ function Beneficary() {
                       <Form.Group>
                         <label>Payee</label>
                         <Form.Control
-                
                           placeholder="Offline Eligibility ID"
                           type="text"
                         ></Form.Control>
@@ -203,7 +208,6 @@ function Beneficary() {
                       <Form.Group>
                         <label>Related Preauthorization Refernce No(s)</label>
                         <Form.Control
-                        
                           placeholder="Related Preauthorization Refernce No(s"
                           type="date"
                         ></Form.Control>
@@ -213,17 +217,14 @@ function Beneficary() {
                       <Form.Group>
                         <label>Referring provider</label>
                         <Form.Control
-                
                           placeholder="Referring provider"
                           type="text"
                         ></Form.Control>
                       </Form.Group>
                     </Col>
-                    
                   </Row>
                 </Form>
               </Card.Body>
-              
             </Card>
           </Col>
         </Row>
