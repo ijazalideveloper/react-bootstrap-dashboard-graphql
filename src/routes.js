@@ -18,7 +18,6 @@
 import Dashboard from "views/Dashboard.js";
 import UserProfile from "views/UserProfile.js";
 import AddProvider from "views/Providers/AddProvider";
-
 const dashboardRoutes = [
   {
     path: "/dashboard",
