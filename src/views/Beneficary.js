@@ -1,6 +1,7 @@
 import React from "react";
 
 // react-bootstrap components
+import CareTeamForm from '../components/Beneficary/CareTeam';
 import {
   Badge,
   Button,
@@ -143,7 +144,7 @@ function Beneficary() {
                       </Form.Group>
                     </Col>
                     <Col className="px-1" md="4">
-                    <Form.Group>
+                      <Form.Group>
                         <label class="form-check-label">Type</label>
                         <Col className="pr-1" md="12">
                           <select class="custom-select" id="gender2">
@@ -155,7 +156,7 @@ function Beneficary() {
                       </Form.Group>
                     </Col>
                     <Col className="px-1" md="4">
-                    <Form.Group>
+                      <Form.Group>
                         <label class="form-check-label">Sub Type</label>
                         <Col className="pr-1" md="12">
                           <select class="custom-select" id="gender2">
@@ -207,7 +208,7 @@ function Beneficary() {
                       </Form.Group>
                     </Col>
                     <Col className="px-1" md="4">
-                    <Form.Group>
+                      <Form.Group>
                         <label class="form-check-label">Payee Type</label>
                         <Col className="pr-1" md="12">
                           <select class="custom-select" id="gender2">
@@ -219,7 +220,7 @@ function Beneficary() {
                       </Form.Group>
                     </Col>
                     <Col className="px-1" md="4">
-                    <Form.Group>
+                      <Form.Group>
                         <label class="form-check-label">Payee</label>
                         <Col className="pr-1" md="12">
                           <select class="custom-select" id="gender2">
@@ -242,8 +243,10 @@ function Beneficary() {
                       </Form.Group>
                     </Col>
                     <Col className="px-1" md="4">
-                    <Form.Group>
-                        <label class="form-check-label">Referring provider</label>
+                      <Form.Group>
+                        <label class="form-check-label">
+                          Referring provider
+                        </label>
                         <Col className="pr-1" md="12">
                           <select class="custom-select" id="gender2">
                             <option selected>Choose...</option>
@@ -258,11 +261,13 @@ function Beneficary() {
               </Card.Body>
             </Card>
 
+            <CareTeamForm />
+
             <Card>
               <Card.Header>
                 <Card.Title as="h4">
-                    Care Team
-                    <Button
+                  Diagnosis
+                  <Button
                     className="btn-fill float-right rounded"
                     type="submit"
                     variant="info"
@@ -274,106 +279,17 @@ function Beneficary() {
               <Card.Body>
                 <Form>
                   <Row>
-                    
-                  <Col className="pr-1" md="3">
-                      <div class="input-group">
-                        <input
-                          type="text"
-                          class="form-control"
-                          placeholder="Search this blog"
-                        />
-                        <div class="input-group-append">
-                          <button
-                            class="btn btn-secondary search_btn_beneficary"
-                            type="button"
-                          >
-                            <i class="fa fa-search"></i>
-                          </button>
-                        </div>
-                      </div>
-                    </Col>
-                    
-                    <Col className="py-0" md="3">
-                    <Form.Group>
-                        <Col className="pr-1" md="12">
-                          <select class="custom-select" id="gender2">
-                            <option selected>Choose...</option>
-                            <option value="1">Institution</option>
-                            <option value="2">Institution 1</option>
-                          </select>
-                        </Col>
-                      </Form.Group>
-                    </Col>
-                    <Col className="py-0" md="3">
-                    <Form.Group>
-                        <Col className="pr-1" md="12">
-                          <select class="custom-select" id="gender2">
-                            <option selected>Choose...</option>
-                            <option value="1">Institution</option>
-                            <option value="2">Institution 1</option>
-                          </select>
-                        </Col>
-                      </Form.Group>
-                    </Col>
-                    <Col className="py-0" md="2">
-                    <Form.Group>
-                        <Col className="pr-1" md="12">
-                          <select class="custom-select" id="gender2">
-                            <option selected>Choose...</option>
-                            <option value="1">Institution</option>
-                            <option value="2">Institution 1</option>
-                          </select>
-                        </Col>
-                      </Form.Group>
-                    </Col>
-                    <Col className="py-0" md="1">
-                    <Button
-                    className="btn-fill pull-right"
-                    type="submit"
-                    variant="info"
-                  >
-                   <i className="nc-icon nc-simple-remove"></i>
-                  </Button>
-                    </Col>
-                  </Row>
-                
-                  
-                </Form>
-              </Card.Body>
-
-
-              
-            </Card>
-
-            <Card>
-              <Card.Header>
-                <Card.Title as="h4">
-                    Diagnosis
-                    <Button
-                    className="btn-fill float-right rounded"
-                    type="submit"
-                    variant="info"
-                  >
-                    +
-                  </Button>
-                </Card.Title>
-              </Card.Header>
-              <Card.Body>
-                <Form>
-                  <Row>
-                    
-                  <Col className="pr-1" md="3">
-                  <Form.Group>
-                      
+                    <Col className="pr-1" md="3">
+                      <Form.Group>
                         <Form.Control
                           placeholder="Eligibility Response Identifier"
                           type="text"
                         ></Form.Control>
                       </Form.Group>
                     </Col>
-                    
+
                     <Col className="py-0" md="3">
-                    <Form.Group>
+                      <Form.Group>
                         <Col className="pr-1" md="12">
                           <select class="custom-select" id="gender2">
                             <option selected>Choose...</option>
@@ -384,7 +300,7 @@ function Beneficary() {
                       </Form.Group>
                     </Col>
                     <Col className="py-0" md="3">
-                    <Form.Group>
+                      <Form.Group>
                         <Col className="pr-1" md="12">
                           <select class="custom-select" id="gender2">
                             <option selected>Choose...</option>
@@ -394,51 +310,41 @@ function Beneficary() {
                         </Col>
                       </Form.Group>
                     </Col>
-                  
+
                     <Col className="py-0" md="3">
-                    <Button
-                    className="btn-fill pull-right"
-                    type="submit"
-                    variant="info"
-                  >
-                   <i className="nc-icon nc-simple-remove"></i>
-                  </Button>
+                      <Button
+                        className="btn-fill pull-right"
+                        type="submit"
+                        variant="info"
+                      >
+                        <i className="nc-icon nc-simple-remove"></i>
+                      </Button>
                     </Col>
                   </Row>
-                
-                  
                 </Form>
               </Card.Body>
-
-
-              
             </Card>
-
 
             <Card>
               <Card.Header>
                 <Card.Title as="h4">
-                <div className="custom-control custom-switch d-inline-flex justify-content-end align-items-center">
+                  <div className="custom-control custom-switch d-inline-flex justify-content-end align-items-center">
                     <input
                       type="checkbox"
                       className="custom-control-input"
                       id="accident"
                     />
-                    <label
-                      className="custom-control-label mb-0"
-                      for="accident"
-                    >
+                    <label className="custom-control-label mb-0" for="accident">
                       Accident
                     </label>
-                    </div>
+                  </div>
                 </Card.Title>
               </Card.Header>
               <Card.Body>
                 <Form>
                   <Row>
-                    
                     <Col className="px-1" md="4">
-                    <Form.Group>
+                      <Form.Group>
                         <label class="form-check-label">Accident Type</label>
                         <Col className="pr-1" md="12">
                           <select class="custom-select" id="gender2">
@@ -479,7 +385,7 @@ function Beneficary() {
                       </Form.Group>
                     </Col>
                     <Col className="px-1" md="4">
-                    <Form.Group>
+                      <Form.Group>
                         <label class="form-check-label">Country</label>
                         <Col className="pr-1" md="12">
                           <select class="custom-select" id="gender2">
@@ -500,27 +406,19 @@ function Beneficary() {
                       </Form.Group>
                     </Col>
                   </Row>
-                 
-                  
                 </Form>
               </Card.Body>
-
-
-              
             </Card>
 
             <Card>
               <Card.Header>
-                <Card.Title as="h4">
-                Add Item
-                </Card.Title>
+                <Card.Title as="h4">Add Item</Card.Title>
               </Card.Header>
               <Card.Body>
                 <Form>
                   <Row>
-                    
                     <Col className="px-1" md="3">
-                    <Form.Group>
+                      <Form.Group>
                         <label class="form-check-label">Type</label>
                         <Col className="pr-1" md="12">
                           <select class="custom-select" id="gender2">
@@ -532,8 +430,10 @@ function Beneficary() {
                       </Form.Group>
                     </Col>
                     <Col className="pr-1" md="3">
-                    <Form.Group>
-                        <label class="form-check-label">Standard Code-Description</label>
+                      <Form.Group>
+                        <label class="form-check-label">
+                          Standard Code-Description
+                        </label>
                         <Col className="pr-1" md="12">
                           <select class="custom-select" id="gender2">
                             <option selected>Choose...</option>
@@ -544,7 +444,7 @@ function Beneficary() {
                       </Form.Group>
                     </Col>
                     <Col className="pr-1" md="3">
-                    <Form.Group>
+                      <Form.Group>
                         <label>Non Standard Code</label>
                         <Form.Control
                           placeholder="Enter Non Standard Code"
@@ -553,7 +453,7 @@ function Beneficary() {
                       </Form.Group>
                     </Col>
                     <Col className="pr-1" md="3">
-                    <Form.Group>
+                      <Form.Group>
                         <label>Non Standard Description</label>
                         <Form.Control
                           placeholder="Non Standard Description"
@@ -564,7 +464,7 @@ function Beneficary() {
                   </Row>
                   <Row>
                     <Col className="pr-1" md="3">
-                    <Form.Group>
+                      <Form.Group>
                         <label class="form-check-label">Body Site</label>
                         <Col className="pr-1" md="12">
                           <select class="custom-select" id="gender2">
@@ -576,7 +476,7 @@ function Beneficary() {
                       </Form.Group>
                     </Col>
                     <Col className="px-1" md="3">
-                    <Form.Group>
+                      <Form.Group>
                         <label class="form-check-label">Sub Site</label>
                         <Col className="pr-1" md="12">
                           <select class="custom-select" id="gender2">
@@ -608,7 +508,7 @@ function Beneficary() {
                   </Row>
                   <Row>
                     <Col className="pr-1" md="3">
-                    <Form.Group>
+                      <Form.Group>
                         <label class="form-check-label">Supporting Info</label>
                         <Col className="pr-1" md="12">
                           <select class="custom-select" id="gender2">
@@ -620,7 +520,7 @@ function Beneficary() {
                       </Form.Group>
                     </Col>
                     <Col className="px-1" md="3">
-                    <Form.Group>
+                      <Form.Group>
                         <label class="form-check-label">Diagnosis</label>
                         <Col className="pr-1" md="12">
                           <select class="custom-select" id="gender2">
@@ -632,7 +532,7 @@ function Beneficary() {
                       </Form.Group>
                     </Col>
                     <Col className="px-1" md="3">
-                    <Form.Group>
+                      <Form.Group>
                         <label class="form-check-label">Care Team</label>
                         <Col className="pr-1" md="12">
                           <select class="custom-select" id="gender2">
@@ -644,7 +544,7 @@ function Beneficary() {
                       </Form.Group>
                     </Col>
                     <Col className="px-1" md="3">
-                    <Form.Group>
+                      <Form.Group>
                         <label class="form-check-label">Is Package?</label>
                         <Col className="pr-1" md="12">
                           <select class="custom-select" id="gender2">
@@ -658,7 +558,7 @@ function Beneficary() {
                   </Row>
                   <Row>
                     <Col className="pr-1" md="3">
-                    <Form.Group>
+                      <Form.Group>
                         <label>Quantity</label>
                         <Form.Control
                           placeholder="Enter Quantity"
@@ -667,7 +567,7 @@ function Beneficary() {
                       </Form.Group>
                     </Col>
                     <Col className="px-1" md="2">
-                    <Form.Group>
+                      <Form.Group>
                         <label>Unit Price</label>
                         <Form.Control
                           placeholder="Enter Unit Price"
@@ -675,11 +575,9 @@ function Beneficary() {
                         ></Form.Control>
                       </Form.Group>
                     </Col>
+                    <Col className="px-1" md="1"></Col>
                     <Col className="px-1" md="1">
-                    
-                    </Col>
-                    <Col className="px-1" md="1">
-                    <Form.Group>
+                      <Form.Group>
                         <label>Tax Amount</label>
                         <Form.Control
                           placeholder="Enter Tax Amount"
@@ -688,7 +586,7 @@ function Beneficary() {
                       </Form.Group>
                     </Col>
                     <Col className="px-1" md="2">
-                    <Form.Group>
+                      <Form.Group>
                         <label>Factor</label>
                         <Form.Control
                           placeholder="Enter Factor"
@@ -697,7 +595,7 @@ function Beneficary() {
                       </Form.Group>
                     </Col>
                     <Col className="px-1" md="3">
-                    <Form.Group>
+                      <Form.Group>
                         <label>Net</label>
                         <Form.Control
                           placeholder="Enter Net"
@@ -708,7 +606,7 @@ function Beneficary() {
                   </Row>
                   <Row>
                     <Col className="pr-1" md="3">
-                    <Form.Group>
+                      <Form.Group>
                         <label>Discount Amount</label>
                         <Form.Control
                           placeholder="Enter Discount Amount"
@@ -717,7 +615,7 @@ function Beneficary() {
                       </Form.Group>
                     </Col>
                     <Col className="px-1" md="2">
-                    <Form.Group>
+                      <Form.Group>
                         <label>Patient Share (%)</label>
                         <Form.Control
                           placeholder="Enter Patient Share"
@@ -726,10 +624,18 @@ function Beneficary() {
                       </Form.Group>
                     </Col>
                     <Col className="px-1" md="1">
-                    <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z"/></svg>
+                      <svg
+                        width="24"
+                        height="24"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                      >
+                        <path d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z" />
+                      </svg>
                     </Col>
                     <Col className="px-1" md="3">
-                    <Form.Group>
+                      <Form.Group>
                         <label>Patient Share Amount</label>
                         <Form.Control
                           placeholder="Enter Patient Share Amount"
@@ -738,7 +644,7 @@ function Beneficary() {
                       </Form.Group>
                     </Col>
                     <Col className="px-1" md="3">
-                    <Form.Group>
+                      <Form.Group>
                         <label>Payer Share</label>
                         <Form.Control
                           placeholder="Enter Payer Share"
@@ -746,13 +652,9 @@ function Beneficary() {
                         ></Form.Control>
                       </Form.Group>
                     </Col>
-                    
                   </Row>
                 </Form>
               </Card.Body>
-
-
-              
             </Card>
           </Col>
         </Row>
