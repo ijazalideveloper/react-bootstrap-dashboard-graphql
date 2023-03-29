@@ -22,8 +22,24 @@ function Beneficary() {
           <Col md="12">
             <Card>
               <Card.Header>
-                <Card.Title as="h4">
+                <Card.Title
+                  as="h4"
+                  className="d-flex justify-content-between align-items-center"
+                >
                   <b>Beneficary Info</b>
+                  <div className="custom-control custom-switch d-inline-flex justify-content-end align-items-center">
+                    <input
+                      type="checkbox"
+                      className="custom-control-input"
+                      id="customSwitch1"
+                    />
+                    <label
+                      className="custom-control-label mb-0"
+                      for="customSwitch1"
+                    >
+                      Referral
+                    </label>
+                  </div>
                 </Card.Title>
               </Card.Header>
               <Card.Body>
