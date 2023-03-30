@@ -11,7 +11,8 @@ import {
   Container,
   Row,
   Col,
-  Modal
+  Modal,
+  Table
 } from "react-bootstrap";
 
 function PriceList() {
@@ -21,10 +22,12 @@ function PriceList() {
     const handleShow = () => setShow(true);
   return (
     <>
-    <Button variant="primary" onClick={handleShow}>
-       Add Price List
-      </Button>
-      <Modal
+    
+     
+      <Container fluid>
+        <Row>
+          <Col md="12">
+          <Modal
         show={show}
         onHide={handleClose}
         backdrop="static"
@@ -129,7 +132,47 @@ function PriceList() {
           <Button variant="primary">Understood</Button>
         </Modal.Footer>
       </Modal>
-      
+            <Card>
+              <Card.Header>
+                <Card.Title as="h4">Price List <Button variant="primary" className="float-right" onClick={handleShow}>
+       Add Price List
+      </Button></Card.Title>
+              </Card.Header>
+              <Card.Body>
+              <Table striped bordered hover size="sm">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Username</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Mark</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Jacob</td>
+          <td>Thornton</td>
+          <td>@fat</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td colSpan={2}>Larry the Bird</td>
+          <td>@twitter</td>
+        </tr>
+      </tbody>
+    </Table>
+              </Card.Body>
+            </Card>
+          </Col>
+        </Row>
+      </Container>
     </>
   );
 }
