@@ -21,6 +21,7 @@ import Providers from './views/Providers';
 import Beneficary from './views/Beneficary';
 
 import AddProvider from "views/Providers/AddProvider";
+import PriceList from "views/PriceList/Price_list";
 
 const dashboardRoutes = [
   {
@@ -49,6 +50,14 @@ const dashboardRoutes = [
     name: "Beneficary",
     icon: "nc-icon nc-circle-09",
     component: Beneficary,
+    layout: "/admin"
+  },
+
+  {
+    path: "/add-price-list",
+    name: "Add Price List",
+    icon: "nc-icon nc-circle-09",
+    component: PriceList,
     layout: "/admin"
   },
 ];
