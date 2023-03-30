@@ -3,7 +3,7 @@ import React, { useState } from "react";
 // react-bootstrap components
 import { Button, Card, Form, Row, Col } from "react-bootstrap";
 
-function CareTeamForm() {
+function Diagnosis() {
   const [inputList, setInputList] = useState([{ firstName: "", lastName: "" }]);
 
   // handle input change
@@ -30,7 +30,7 @@ function CareTeamForm() {
       <Col md="12">
         <Card>
           <Card.Header className="d-flex justify-content-between">
-            <Card.Title as="h4">Care Team</Card.Title>
+            <Card.Title as="h4">Diagnosis</Card.Title>
             {/* {inputList.length - 1 === i && ( */}
             <Button
               className="btn-fill float-right rounded"
@@ -49,24 +49,14 @@ function CareTeamForm() {
                   <>
                     <Row>
                       <Col className="pr-1" md="3">
-                        <div class="input-group">
-                          <input
+                        <Form.Group>
+                          <Form.Control
+                            placeholder="Eligibility Response Identifier"
                             type="text"
-                            class="form-control"
-                            placeholder="Search this blog"
-                            value={x.firstName}
-                            onChange={(e) => handleInputChange(e, i)}
-                          />
-                          <div class="input-group-append">
-                            <button
-                              class="btn btn-secondary search_btn_beneficary"
-                              type="button"
-                            >
-                              <i class="fa fa-search"></i>
-                            </button>
-                          </div>
-                        </div>
+                          ></Form.Control>
+                        </Form.Group>
                       </Col>
+
                       <Col className="py-0" md="3">
                         <Form.Group>
                           <Col className="pr-1" md="12">
@@ -93,22 +83,11 @@ function CareTeamForm() {
                           </Col>
                         </Form.Group>
                       </Col>
-                      <Col className="py-0" md="2">
-                        <Form.Group>
-                          <Col className="pr-1" md="12">
-                            <select class="custom-select" id="gender2">
-                              <option selected>Choose...</option>
-                              <option value="1">Institution</option>
-                              <option value="2">Institution 1</option>
-                            </select>
-                          </Col>
-                        </Form.Group>
-                      </Col>
                       <Col className="py-1 d-inline-flex justify-content-end" md="1">
                         {inputList.length !== 1 && (
                           <Button
                             className="btn-fill pull-right"
-                            type="submit"
+                            type="button"
                             variant="info"
                             onClick={() => handleRemoveClick(i)}
                           >
@@ -142,4 +121,4 @@ function CareTeamForm() {
   );
 }
 
-export default CareTeamForm;
+export default Diagnosis;

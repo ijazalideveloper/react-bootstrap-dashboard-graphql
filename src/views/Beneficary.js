@@ -1,8 +1,10 @@
 import React from "react";
 
 // react-bootstrap components
-import CareTeamForm from '../components/Beneficary/CareTeam';
+import CareTeamForm from "../components/Beneficary/CareTeam";
 import Accident from "components/Beneficary/Accident";
+import { BeneficaryHook } from "../hooks/BeneficaryHook/BenaficaryHook";
+import Diagnosis from '../components/Beneficary/Diagnosis';
 import {
   Badge,
   Button,
@@ -16,7 +18,9 @@ import {
   Col,
 } from "react-bootstrap";
 
-function Beneficary() {
+const Beneficary = () => {
+  const { createNewBeneficaryField, onClickInsurancePlanFieldAdd } =
+    BeneficaryHook();
   return (
     <>
       <Container fluid>
@@ -103,27 +107,32 @@ function Beneficary() {
                     <Col className="pr-1" md="5">
                       <Button
                         className="btn-fill float-right mr-4"
-                        type="submit"
+                        type="button"
                         variant="info"
+                        onClick={onClickInsurancePlanFieldAdd}
                       >
                         Create New Beneficary
                       </Button>
                     </Col>
                   </Row>
-                  <Row>
-                    <Col className="pr-1" md="5">
-                      <Form.Group>
-                        <label class="form-check-label">Insurance Plans</label>
-                        <Col className="pr-1" md="12">
-                          <select class="custom-select" id="gender2">
-                            <option selected>Choose...</option>
-                            <option value="1">Male</option>
-                            <option value="2">Female</option>
-                          </select>
-                        </Col>
-                      </Form.Group>
-                    </Col>
-                  </Row>
+                  {createNewBeneficaryField && (
+                    <Row>
+                      <Col className="pr-1" md="5">
+                        <Form.Group>
+                          <label class="form-check-label">
+                            Insurance Plans
+                          </label>
+                          <Col className="pr-1" md="12">
+                            <select class="custom-select" id="gender2">
+                              <option selected>Choose...</option>
+                              <option value="1">Male</option>
+                              <option value="2">Female</option>
+                            </select>
+                          </Col>
+                        </Form.Group>
+                      </Col>
+                    </Row>
+                  )}
                 </Form>
               </Card.Body>
             </Card>
@@ -264,71 +273,10 @@ function Beneficary() {
 
             <CareTeamForm />
 
-            <Card>
-              <Card.Header>
-                <Card.Title as="h4">
-                  Diagnosis
-                  <Button
-                    className="btn-fill float-right rounded"
-                    type="submit"
-                    variant="info"
-                  >
-                    +
-                  </Button>
-                </Card.Title>
-              </Card.Header>
-              <Card.Body>
-                <Form>
-                  <Row>
-                    <Col className="pr-1" md="3">
-                      <Form.Group>
-                        <Form.Control
-                          placeholder="Eligibility Response Identifier"
-                          type="text"
-                        ></Form.Control>
-                      </Form.Group>
-                    </Col>
+            <Diagnosis />
 
-                    <Col className="py-0" md="3">
-                      <Form.Group>
-                        <Col className="pr-1" md="12">
-                          <select class="custom-select" id="gender2">
-                            <option selected>Choose...</option>
-                            <option value="1">Institution</option>
-                            <option value="2">Institution 1</option>
-                          </select>
-                        </Col>
-                      </Form.Group>
-                    </Col>
-                    <Col className="py-0" md="3">
-                      <Form.Group>
-                        <Col className="pr-1" md="12">
-                          <select class="custom-select" id="gender2">
-                            <option selected>Choose...</option>
-                            <option value="1">Institution</option>
-                            <option value="2">Institution 1</option>
-                          </select>
-                        </Col>
-                      </Form.Group>
-                    </Col>
-
-                    <Col className="py-0" md="3">
-                      <Button
-                        className="btn-fill pull-right"
-                        type="submit"
-                        variant="info"
-                      >
-                        <i className="nc-icon nc-simple-remove"></i>
-                      </Button>
-                    </Col>
-                  </Row>
-                </Form>
-              </Card.Body>
-            </Card>
-
-            
             <Accident></Accident>
-            
+
             <Card>
               <Card.Header>
                 <Card.Title as="h4">Add Item</Card.Title>
