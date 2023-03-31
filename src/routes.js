@@ -23,6 +23,7 @@ import AddProvider from "views/Providers/AddProvider";
 import Providers from "./views/Providers/Providers";
 import PriceList from "views/PriceList/Price_list";
 import Beneficaries from "views/Beneficary/Beneficaries";
+import Reconciliation from "views/Reconciliation/Reconciliation";
 
 const dashboardRoutes = [
   {
@@ -59,6 +60,13 @@ const dashboardRoutes = [
     name: "beneficaries",
     icon: "nc-icon nc-circle-09",
     component: Beneficaries,
+    layout: "/admin"
+  },
+  {
+    path: "/reconciliation",
+    name: "reconciliation",
+    icon: "nc-icon nc-circle-09",
+    component: Reconciliation,
     layout: "/admin"
   },
 
