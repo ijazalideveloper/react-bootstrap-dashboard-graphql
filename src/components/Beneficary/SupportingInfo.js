@@ -2,7 +2,14 @@ import React, { useState } from "react";
 
 // react-bootstrap components
 import { Button, Card, Form, Row, Col } from "react-bootstrap";
+import AttachmentForm from "./AttachmentForm";
+import { SupportingInfoHook } from "../../hooks/BeneficaryHook/SupportingInfoHook";
 function SupportingInfo() {
+  const {
+    supportingInfoAttachmentForm,
+    setSupportingInfoAttachmentForm,
+    onClicksetSupportingInfoAttachmentForm,
+  } = SupportingInfoHook();
   const [createNewBeneficaryField, setCreateNewBeneficaryField] =
     useState(false);
 
@@ -14,180 +21,156 @@ function SupportingInfo() {
       <Col md="12">
         <Card>
           <Card.Header>
-            <Card.Title as="h4">
-              Supporting Info
-            </Card.Title>
+            <Card.Title as="h4">Supporting Info</Card.Title>
             <div className="my-2">
-            <Button
-              className="btn-fill btn-sm mx-1 my-1 rounded"
-              type="button"
-              variant="info"
-            
-            >
-             Attachment +
-            </Button>
-            <Button
-              className="btn-fill btn-sm mx-1 my-1  rounded"
-              type="button"
-              variant="info"
-            
-            >
-             Birth Weight +
-            </Button>
-            <Button
-              className="btn-fill btn-sm  mx-1 my-1  rounded"
-              type="button"
-              variant="info"
-            
-            >
-             Cheif Complaint +
-            </Button>
-            <Button
-              className="btn-fill btn-sm mx-1 my-1  rounded"
-              type="button"
-              variant="info"
-            
-            >
-             Days Supply +
-            </Button>
-
-            <Button
-              className="btn-fill btn-sm mx-1 my-1 rounded"
-              type="button"
-              variant="info"
-            
-            >
-             Employment Impacted +
-            </Button>
-
-            <Button
-              className="btn-fill btn-sm mx-1 my-1 rounded"
-              type="button"
-              variant="info"
-            
-            >
-             Hospitalized +
-            </Button>
-            <Button
-              className="btn-fill btn-sm mx-1 my-1 rounded"
-              type="button"
-              variant="info"
-            
-            >
-             ICU Hours +
-            </Button>
-            <Button
-              className="btn-fill btn-sm mx-1 my-1 rounded"
-              type="button"
-              variant="info"
-            
-            >
-             Info +
-            </Button>
-            <Button
-              className="btn-fill btn-sm mx-1 my-1 rounded"
-              type="button"
-              variant="info"
-            
-            >
-             Lab Test +
-            </Button>
-            <Button
-              className="btn-fill btn-sm mx-1 my-1  rounded"
-              type="button"
-              variant="info"
-            
-            >
-             Last Menstrual Period +
-            </Button>
-            <Button
-              className="btn-fill btn-sm mx-1 my-1  rounded"
-              type="button"
-              variant="info"
-            
-            >
-             Missing Tooth+
-            </Button>
-            <Button
-              className="btn-fill btn-sm mx-1 my-1 rounded"
-              type="button"
-              variant="info"
-            
-            >
-             Onset+
-            </Button>
-            <Button
-              className="btn-fill btn-sm mx-1 my-1 rounded"
-              type="button"
-              variant="info"
-            
-            >
-             Oxygen Saturation+
-            </Button>
-            <Button
-              className="btn-fill btn-sm mx-1 my-1 rounded"
-              type="button"
-              variant="info"
-            
-            >
-             Pulse+
-            </Button>
-            <Button
-              className="btn-fill btn-sm mx-1 my-1 rounded"
-              type="button"
-              variant="info"
-            
-            >
-             Reason for Visit +
-            </Button>
-            <Button
-              className="btn-fill btn-sm mx-1 my-1 rounded"
-              type="button"
-              variant="info"
-            
-            >
-             Respiratory Rate +
-            </Button>
-            <Button
-              className="btn-fill btn-sm mx-1 my-1 rounded"
-              type="button"
-              variant="info"
-            
-            >
-             Temperature +
-            </Button>
-            <Button
-              className="btn-fill btn-sm mx-1 my-1 rounded"
-              type="button"
-              variant="info"
-            
-            >
-             Ventilation Hours +
-            </Button>
-            <Button
-              className="btn-fill btn-sm mx-1 my-1 rounded"
-              type="button"
-              variant="info"
-            
-            >
-             Vital Sign Diastolic +
-            </Button>
-            <Button
-              className="btn-fill btn-sm mx-1 my-1 rounded"
-              type="button"
-              variant="info"
-            
-            >
-             Vital Sign Systolic +
-            </Button>
-            <Button
-              className="btn-fill btn-sm mx-1 my-1 rounded"
-              type="button"
-              variant="info"
-            
-            >
-             Vital Sign Weight +
-            </Button>
+              <Button
+                className="btn-fill btn-sm mx-1 my-1 rounded"
+                type="button"
+                variant="info"
+                onClick={onClicksetSupportingInfoAttachmentForm}
+              >
+                Attachment +
+              </Button>
+              <Button
+                className="btn-fill btn-sm mx-1 my-1  rounded"
+                type="button"
+                variant="info"
+              >
+                Birth Weight +
+              </Button>
+              <Button
+                className="btn-fill btn-sm  mx-1 my-1  rounded"
+                type="button"
+                variant="info"
+              >
+                Cheif Complaint +
+              </Button>
+              <Button
+                className="btn-fill btn-sm mx-1 my-1  rounded"
+                type="button"
+                variant="info"
+              >
+                Days Supply +
+              </Button>
+              <Button
+                className="btn-fill btn-sm mx-1 my-1 rounded"
+                type="button"
+                variant="info"
+              >
+                Employment Impacted +
+              </Button>
+              <Button
+                className="btn-fill btn-sm mx-1 my-1 rounded"
+                type="button"
+                variant="info"
+              >
+                Hospitalized +
+              </Button>
+              <Button
+                className="btn-fill btn-sm mx-1 my-1 rounded"
+                type="button"
+                variant="info"
+              >
+                ICU Hours +
+              </Button>
+              <Button
+                className="btn-fill btn-sm mx-1 my-1 rounded"
+                type="button"
+                variant="info"
+              >
+                Info +
+              </Button>
+              <Button
+                className="btn-fill btn-sm mx-1 my-1 rounded"
+                type="button"
+                variant="info"
+              >
+                Lab Test +
+              </Button>
+              <Button
+                className="btn-fill btn-sm mx-1 my-1  rounded"
+                type="button"
+                variant="info"
+              >
+                Last Menstrual Period +
+              </Button>
+              <Button
+                className="btn-fill btn-sm mx-1 my-1  rounded"
+                type="button"
+                variant="info"
+              >
+                Missing Tooth+
+              </Button>
+              <Button
+                className="btn-fill btn-sm mx-1 my-1 rounded"
+                type="button"
+                variant="info"
+              >
+                Onset+
+              </Button>
+              <Button
+                className="btn-fill btn-sm mx-1 my-1 rounded"
+                type="button"
+                variant="info"
+              >
+                Oxygen Saturation+
+              </Button>
+              <Button
+                className="btn-fill btn-sm mx-1 my-1 rounded"
+                type="button"
+                variant="info"
+              >
+                Pulse+
+              </Button>
+              <Button
+                className="btn-fill btn-sm mx-1 my-1 rounded"
+                type="button"
+                variant="info"
+              >
+                Reason for Visit +
+              </Button>
+              <Button
+                className="btn-fill btn-sm mx-1 my-1 rounded"
+                type="button"
+                variant="info"
+              >
+                Respiratory Rate +
+              </Button>
+              <Button
+                className="btn-fill btn-sm mx-1 my-1 rounded"
+                type="button"
+                variant="info"
+              >
+                Temperature +
+              </Button>
+              <Button
+                className="btn-fill btn-sm mx-1 my-1 rounded"
+                type="button"
+                variant="info"
+              >
+                Ventilation Hours +
+              </Button>
+              <Button
+                className="btn-fill btn-sm mx-1 my-1 rounded"
+                type="button"
+                variant="info"
+              >
+                Vital Sign Diastolic +
+              </Button>
+              <Button
+                className="btn-fill btn-sm mx-1 my-1 rounded"
+                type="button"
+                variant="info"
+              >
+                Vital Sign Systolic +
+              </Button>
+              <Button
+                className="btn-fill btn-sm mx-1 my-1 rounded"
+                type="button"
+                variant="info"
+              >
+                Vital Sign Weight +
+              </Button>
             </div>
           </Card.Header>
           {createNewBeneficaryField && (
@@ -258,6 +241,8 @@ function SupportingInfo() {
               </Form>
             </Card.Body>
           )}
+
+          {supportingInfoAttachmentForm && <AttachmentForm />}
         </Card>
       </Col>
     </Row>

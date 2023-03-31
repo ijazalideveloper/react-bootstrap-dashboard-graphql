@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 // react-bootstrap components
-import { Button, Card, Form, Row, Col,Table } from "react-bootstrap";
+import { Button, Card, Form, Row, Col, Table } from "react-bootstrap";
 
 function CareTeamForm() {
   const [inputList, setInputList] = useState([{ firstName: "", lastName: "" }]);
@@ -40,20 +40,34 @@ function CareTeamForm() {
             >
               +
             </Button>
-            
+
             {/* )} */}
           </Card.Header>
-          <Table size="sm">
-      <thead >
-        <tr className="bg-info text-white mx-2">
-          <th className="text-white align-center">Practioner</th>
-          <th className="text-white align-center">Practioner Role</th>
-          <th className="text-white align-center">Care Team Role</th>
-          <th className="text-white align-center">Qualification</th>
-          <th></th>
-        </tr>
-      </thead>
-      </Table>
+          {/* <Table size="sm">
+            <thead>
+              <tr className="bg-info text-white mx-2">
+                <th className="text-white align-center">Practioner</th>
+                <th className="text-white align-center">Practioner Role</th>
+                <th className="text-white align-center">Care Team Role</th>
+                <th className="text-white align-center">Qualification</th>
+                <th></th>
+              </tr>
+            </thead>
+          </Table> */}
+          <div className="bg-info d-flex">
+            <Col className="py-0 text-white py-1 px-3" md="3">
+              Practioner
+            </Col>
+            <Col className="py-0 text-white py-1 px-3 ml-1" md="3">
+              Practioner Role
+            </Col>
+            <Col className="py-0 text-white py-1 px-3" md="3">
+              Care Team Role
+            </Col>
+            <Col className="py-0 text-white py-1 px-3" md="3">
+              Qualification
+            </Col>
+          </div>
           <Card.Body>
             <Form>
               {inputList.map((x, i) => {
@@ -116,7 +130,10 @@ function CareTeamForm() {
                           </Col>
                         </Form.Group>
                       </Col>
-                      <Col className="py-1 d-inline-flex justify-content-end" md="1">
+                      <Col
+                        className="py-1 d-inline-flex justify-content-end"
+                        md="1"
+                      >
                         {inputList.length !== 1 && (
                           <Button
                             className="btn-fill pull-right"

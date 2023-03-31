@@ -7,6 +7,7 @@ import { BeneficaryHook } from "../hooks/BeneficaryHook/BenaficaryHook";
 import Diagnosis from "../components/Beneficary/Diagnosis";
 import AddItemForm from "../components/Beneficary/AddItemForm";
 import SupportingInfo from "components/Beneficary/SupportingInfo";
+import AttachmentForm from "../components/Beneficary/AttachmentForm";
 import {
   Badge,
   Button,
@@ -278,7 +279,9 @@ const Beneficary = () => {
             <Diagnosis />
 
             <Accident></Accident>
+
             <SupportingInfo></SupportingInfo>
+            
             <AddItemForm />
           </Col>
         </Row>
