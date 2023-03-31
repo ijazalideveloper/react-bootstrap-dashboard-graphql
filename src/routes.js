@@ -17,10 +17,10 @@
 */
 import Dashboard from "views/Dashboard.js";
 import UserProfile from "views/UserProfile.js";
-import Providers from './views/Providers';
 import Beneficary from './views/Beneficary';
 
 import AddProvider from "views/Providers/AddProvider";
+import Providers from "./views/Providers/Providers";
 import PriceList from "views/PriceList/Price_list";
 
 const dashboardRoutes = [
@@ -39,10 +39,10 @@ const dashboardRoutes = [
     layout: "/admin"
   },
   {
-    path: "/add-provider",
-    name: "Add Provider",
+    path: "/providers",
+    name: "Providers",
     icon: "nc-icon nc-circle-09",
-    component: AddProvider,
+    component: Providers,
     layout: "/admin"
   },
   {
