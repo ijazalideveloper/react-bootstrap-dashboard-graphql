@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 // react-bootstrap components
-import { Button, Card, Form, Row, Col } from "react-bootstrap";
+import { Button, Card, Form, Row, Col,Table } from "react-bootstrap";
 
 function CareTeamForm() {
   const [inputList, setInputList] = useState([{ firstName: "", lastName: "" }]);
@@ -33,15 +33,27 @@ function CareTeamForm() {
             <Card.Title as="h4">Care Team</Card.Title>
             {/* {inputList.length - 1 === i && ( */}
             <Button
-              className="btn-fill float-right rounded"
+              className="btn-fill float-right rounded mb-3"
               type="button"
               variant="info"
               onClick={handleAddClick}
             >
               +
             </Button>
+            
             {/* )} */}
           </Card.Header>
+          <Table size="sm">
+      <thead >
+        <tr className="bg-info text-white mx-2">
+          <th className="text-white align-center">Practioner</th>
+          <th className="text-white align-center">Practioner Role</th>
+          <th className="text-white align-center">Care Team Role</th>
+          <th className="text-white align-center">Qualification</th>
+          <th></th>
+        </tr>
+      </thead>
+      </Table>
           <Card.Body>
             <Form>
               {inputList.map((x, i) => {

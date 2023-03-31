@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 // react-bootstrap components
-import { Button, Card, Form, Row, Col } from "react-bootstrap";
+import { Button, Card, Form, Row, Col,Table } from "react-bootstrap";
 
 function Diagnosis() {
   const [inputList, setInputList] = useState([{ firstName: "", lastName: "" }]);
@@ -33,7 +33,7 @@ function Diagnosis() {
             <Card.Title as="h4">Diagnosis</Card.Title>
             {/* {inputList.length - 1 === i && ( */}
             <Button
-              className="btn-fill float-right rounded"
+              className="btn-fill float-right rounded mb-3"
               type="button"
               variant="info"
               onClick={handleAddClick}
@@ -42,6 +42,17 @@ function Diagnosis() {
             </Button>
             {/* )} */}
           </Card.Header>
+          <Table size="sm">
+      <thead >
+        <tr className="bg-info text-white mx-2">
+          <th className="text-white align-center">Code - Description</th>
+          <th className="text-white align-center">Type</th>
+          <th className="text-white align-center">On Admission</th>
+
+          <th></th>
+        </tr>
+      </thead>
+      </Table>
           <Card.Body>
             <Form>
               {inputList.map((x, i) => {
