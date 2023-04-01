@@ -8,6 +8,7 @@ import Diagnosis from "../components/Beneficary/Diagnosis";
 import AddItemForm from "../components/Beneficary/AddItemForm";
 import SupportingInfo from "components/Beneficary/SupportingInfo";
 import AttachmentForm from "../components/Beneficary/AttachmentForm";
+import PreAuthorizationForm from '../components/Beneficary/PreAuthorizationForm';
 import {
   Badge,
   Button,
@@ -86,7 +87,7 @@ const Beneficary = () => {
                         />
                         <div class="input-group-append">
                           <button
-                            class="btn btn-secondary search_btn_beneficary"
+                            class="btn btn-secondary search_btn_beneficary border bg-light"
                             type="button"
                           >
                             <i class="fa fa-search"></i>
@@ -140,139 +141,7 @@ const Beneficary = () => {
               </Card.Body>
             </Card>
 
-            <Card>
-              <Card.Header>
-                <Card.Title as="h4">Pre Authorization Info</Card.Title>
-              </Card.Header>
-              <Card.Body>
-                <Form>
-                  <Row>
-                    <Col className="pr-1" md="4">
-                      <Form.Group>
-                        <label>Date Ordered</label>
-                        <Form.Control
-                          placeholder="Date Ordered"
-                          type="date"
-                        ></Form.Control>
-                      </Form.Group>
-                    </Col>
-                    <Col className="px-1" md="4">
-                      <Form.Group>
-                        <label class="form-check-label">Type</label>
-                        <Col className="pr-1" md="12">
-                          <select class="custom-select" id="gender2">
-                            <option selected>Choose...</option>
-                            <option value="1">Institution</option>
-                            <option value="2">Institution 1</option>
-                          </select>
-                        </Col>
-                      </Form.Group>
-                    </Col>
-                    <Col className="px-1" md="4">
-                      <Form.Group>
-                        <label class="form-check-label">Sub Type</label>
-                        <Col className="pr-1" md="12">
-                          <select class="custom-select" id="gender2">
-                            <option selected>Choose...</option>
-                            <option value="1">Out Patient</option>
-                            <option value="2">Institution 1</option>
-                          </select>
-                        </Col>
-                      </Form.Group>
-                    </Col>
-                  </Row>
-                  <Row>
-                    <Col className="pr-1" md="4">
-                      <Form.Group>
-                        <label>Eligibility Response Identifier(value)</label>
-                        <Form.Control
-                          placeholder="Eligibility Response Identifier"
-                          type="text"
-                        ></Form.Control>
-                      </Form.Group>
-                    </Col>
-                    <Col className="px-1" md="4">
-                      <Form.Group>
-                        <label>Eligibility Response Identifier (URL)</label>
-                        <Form.Control
-                          placeholder="Eligibility Response Identifier(URL)"
-                          type="text"
-                        ></Form.Control>
-                      </Form.Group>
-                    </Col>
-                    <Col className="px-1" md="4">
-                      <Form.Group>
-                        <label>Offline Eligibility ID</label>
-                        <Form.Control
-                          placeholder="Offline Eligibility ID"
-                          type="text"
-                        ></Form.Control>
-                      </Form.Group>
-                    </Col>
-                  </Row>
-                  <Row>
-                    <Col className="pr-1" md="4">
-                      <Form.Group>
-                        <label>Offline Eligibility Date</label>
-                        <Form.Control
-                          placeholder="Offline Eligibility Date"
-                          type="date"
-                        ></Form.Control>
-                      </Form.Group>
-                    </Col>
-                    <Col className="px-1" md="4">
-                      <Form.Group>
-                        <label class="form-check-label">Payee Type</label>
-                        <Col className="pr-1" md="12">
-                          <select class="custom-select" id="gender2">
-                            <option selected>Choose...</option>
-                            <option value="1">Institution</option>
-                            <option value="2">Institution 1</option>
-                          </select>
-                        </Col>
-                      </Form.Group>
-                    </Col>
-                    <Col className="px-1" md="4">
-                      <Form.Group>
-                        <label class="form-check-label">Payee</label>
-                        <Col className="pr-1" md="12">
-                          <select class="custom-select" id="gender2">
-                            <option selected>Choose...</option>
-                            <option value="1">Institution</option>
-                            <option value="2">Institution 1</option>
-                          </select>
-                        </Col>
-                      </Form.Group>
-                    </Col>
-                  </Row>
-                  <Row>
-                    <Col className="pr-1" md="4">
-                      <Form.Group>
-                        <label>Related Preauthorization Refernce No(s)</label>
-                        <Form.Control
-                          placeholder="Related Preauthorization Refernce No(s"
-                          type="date"
-                        ></Form.Control>
-                      </Form.Group>
-                    </Col>
-                    <Col className="px-1" md="4">
-                      <Form.Group>
-                        <label class="form-check-label">
-                          Referring provider
-                        </label>
-                        <Col className="pr-1" md="12">
-                          <select class="custom-select" id="gender2">
-                            <option selected>Choose...</option>
-                            <option value="1">Institution</option>
-                            <option value="2">Institution 1</option>
-                          </select>
-                        </Col>
-                      </Form.Group>
-                    </Col>
-                  </Row>
-                </Form>
-              </Card.Body>
-            </Card>
+            <PreAuthorizationForm />
 
             <CareTeamForm />
 
@@ -281,7 +150,7 @@ const Beneficary = () => {
             <Accident></Accident>
 
             <SupportingInfo></SupportingInfo>
-            
+
             <AddItemForm />
           </Col>
         </Row>

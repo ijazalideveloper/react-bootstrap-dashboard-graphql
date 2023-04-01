@@ -85,7 +85,7 @@ function CareTeamForm() {
                           />
                           <div class="input-group-append">
                             <button
-                              class="btn btn-secondary search_btn_beneficary"
+                              class="btn btn-secondary search_btn_beneficary border"
                               type="button"
                             >
                               <i class="fa fa-search"></i>
