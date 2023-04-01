@@ -16,13 +16,18 @@
 
 */
 import React, { Component } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, NavLink } from "react-router-dom";
 import { Navbar, Container, Nav, Dropdown, Button } from "react-bootstrap";
 
 import routes from "routes.js";
 
-function Header() {
+function Header({ routes }) {
+
   const location = useLocation();
+  const activeRoute = (routeName) => {
+    return location.pathname.indexOf(routeName) > -1 ? "active" : "";
+  };
+
   const mobileSidebarToggle = (e) => {
     e.preventDefault();
     document.documentElement.classList.toggle("nav-open");
@@ -54,13 +59,41 @@ function Header() {
           >
             <i className="fas fa-ellipsis-v"></i>
           </Button>
-          <Navbar.Brand
+          <Nav>
+          {routes.map((prop, key) => {
+            if (!prop.redirect)
+              return (
+                <li
+                  className={
+                    prop.upgrade
+                      ? "active active-pro"
+                      : activeRoute(prop.layout + prop.path)
+                  }
+                  key={key}
+                  style={{
+                    display: prop.hidden ? "none" : "block",
+                  }}
+                >
+                  <NavLink
+                    to={prop.layout + prop.path}
+                    className="nav-link"
+                    activeClassName="active"
+                  >
+                    {/* <i className={prop.icon} /> */}
+                    <p className="mb-0">{prop.name}</p>
+                  </NavLink>
+                </li>
+              );
+            return null;
+          })}
+        </Nav>
+          {/* <Navbar.Brand
             href="#home"
             onClick={(e) => e.preventDefault()}
             className="mr-2"
           >
             {getBrandText()}
-          </Navbar.Brand>
+          </Navbar.Brand> */}
         </div>
         <Navbar.Toggle aria-controls="basic-navbar-nav" className="mr-2">
           <span className="navbar-toggler-bar burger-lines"></span>

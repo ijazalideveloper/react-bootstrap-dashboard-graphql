@@ -33,13 +33,13 @@ const dashboardRoutes = [
     component: Dashboard,
     layout: "/admin"
   },
-  {
-    path: "/user",
-    name: "User Profile",
-    icon: "nc-icon nc-circle-09",
-    component: UserProfile,
-    layout: "/admin"
-  },
+  // {
+  //   path: "/user",
+  //   name: "User Profile",
+  //   icon: "nc-icon nc-circle-09",
+  //   component: UserProfile,
+  //   layout: "/admin"
+  // },
   {
     path: "/providers",
     name: "Providers",
@@ -49,10 +49,11 @@ const dashboardRoutes = [
   },
   {
     path: "/addEditProviders",
-    name: "AddEditProviders",
+    name: "Providers",
     icon: "nc-icon nc-circle-09",
     component: AddProvider,
-    layout: "/admin"
+    layout: "/admin",
+    hidden: true,
   },
   {
     path: "/beneficary",
@@ -64,14 +65,15 @@ const dashboardRoutes = [
 
   {
     path: "/beneficaries",
-    name: "beneficaries",
+    name: "Beneficary",
     icon: "nc-icon nc-circle-09",
     component: Beneficaries,
-    layout: "/admin"
+    layout: "/admin",
+    hidden: true,
   },
   {
     path: "/reconciliation",
-    name: "reconciliation",
+    name: "Reconciliation",
     icon: "nc-icon nc-circle-09",
     component: Reconciliation,
     layout: "/admin"
