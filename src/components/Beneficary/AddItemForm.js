@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 // react-bootstrap components
-import { Button, Card, Form, Row, Col,Modal } from "react-bootstrap";
+import { Button, Card, Form, Row, Col, Modal } from "react-bootstrap";
 
 function AddItemForm() {
   const [show, setShow] = useState(false);
 
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
   return (
     <Row>
       <Col md="12">
@@ -15,17 +15,22 @@ function AddItemForm() {
           onHide={handleClose}
           backdrop="static"
           keyboard={false}
-          className=""
+          className="addBeneficaryItemCustomClass"
+          // dialogClassName="modal-90w"
+          // fullscreen="xxl-down"
+          size="xl"
         >
-          <Modal.Header closeButton>
-            <Modal.Title>Add Price List</Modal.Title>
+          <Modal.Header closeButton className="mb-0">
+            <Modal.Title className="mb-0 mt-0">
+              <strong>Add Price List</strong>
+            </Modal.Title>
           </Modal.Header>
           <Modal.Body>
-          <Form>
-              <Row>
+            <Form>
+              <Row className="mb-3">
                 <Col className="" md="3">
                   <Form.Group>
-                    <label class="form-check-label">Type</label>
+                    <label className="form-check-label">Type</label>
 
                     <select class="custom-select" id="gender2">
                       <option selected>Choose...</option>
@@ -46,18 +51,18 @@ function AddItemForm() {
                     </select>
                   </Form.Group>
                 </Col>
-                <Col className="pr-1" md="3">
+                <Col className="" md="3">
                   <Form.Group>
-                    <label>Non Standard Code</label>
+                    <label class="form-check-label">Non Standard Code</label>
                     <Form.Control
                       placeholder="Enter Non Standard Code"
                       type="text"
                     ></Form.Control>
                   </Form.Group>
                 </Col>
-                <Col className="pr-1" md="3">
+                <Col className="" md="3">
                   <Form.Group>
-                    <label>Non Standard Description</label>
+                    <label class="form-check-label">Non Standard Description</label>
                     <Form.Control
                       placeholder="Non Standard Description"
                       type="text"
@@ -65,7 +70,7 @@ function AddItemForm() {
                   </Form.Group>
                 </Col>
               </Row>
-              <Row>
+              <Row className="mb-3">
                 <Col className="" md="3">
                   <Form.Group>
                     <label class="form-check-label">Body Site</label>
@@ -101,7 +106,7 @@ function AddItemForm() {
                   </Form.Group>
                 </Col>
               </Row>
-              <Row>
+              <Row className="mb-3">
                 <Col className="" md="3">
                   <Form.Group>
                     <label class="form-check-label">Supporting Info</label>
@@ -144,10 +149,10 @@ function AddItemForm() {
                   </Form.Group>
                 </Col>
               </Row>
-              <Row>
+              <Row className="mb-3">
                 <Col className="" md="3">
                   <Form.Group>
-                    <label>Quantity</label>
+                    <label className="form-check-label">Quantity</label>
                     <Form.Control
                       placeholder="Enter Quantity"
                       type="text"
@@ -156,7 +161,7 @@ function AddItemForm() {
                 </Col>
                 <Col className="" md="2">
                   <Form.Group>
-                    <label>Unit Price</label>
+                    <label className="form-check-label">Unit Price</label>
                     <Form.Control
                       placeholder="Enter Unit Price"
                       type="number"
@@ -164,9 +169,9 @@ function AddItemForm() {
                   </Form.Group>
                 </Col>
                 <Col className="" md="1"></Col>
-                <Col className="" md="1">
+                <Col className="" md="2">
                   <Form.Group>
-                    <label>Tax Amount</label>
+                    <label className="form-check-label">Tax Amount</label>
                     <Form.Control
                       placeholder="Enter Tax Amount"
                       type="number"
@@ -175,16 +180,16 @@ function AddItemForm() {
                 </Col>
                 <Col className="" md="2">
                   <Form.Group>
-                    <label>Factor</label>
+                    <label className="form-check-label">Factor</label>
                     <Form.Control
                       placeholder="Enter Factor"
                       type="number"
                     ></Form.Control>
                   </Form.Group>
                 </Col>
-                <Col className="" md="3">
+                <Col className="" md="2">
                   <Form.Group>
-                    <label>Net</label>
+                    <label className="form-check-label">Net</label>
                     <Form.Control
                       placeholder="Enter Net"
                       type="number"
@@ -192,10 +197,10 @@ function AddItemForm() {
                   </Form.Group>
                 </Col>
               </Row>
-              <Row>
+              <Row className="mb-3">
                 <Col className="" md="3">
                   <Form.Group>
-                    <label>Discount Amount</label>
+                    <label className="form-check-label">Discount Amount</label>
                     <Form.Control
                       placeholder="Enter Discount Amount"
                       type="text"
@@ -204,7 +209,7 @@ function AddItemForm() {
                 </Col>
                 <Col className="" md="2">
                   <Form.Group>
-                    <label>Patient Share (%)</label>
+                    <label className="form-check-label">Patient Share (%)</label>
                     <Form.Control
                       placeholder="Enter Patient Share"
                       type="text"
@@ -255,13 +260,18 @@ function AddItemForm() {
         </Modal>
         <Card>
           <Card.Header>
-            <Card.Title as="h4">Add Item <Button variant="primary" className="float-right" onClick={handleShow}>
-                                    Add Price List
-                                </Button></Card.Title>
+            <Card.Title as="h4">
+              Add Item{" "}
+              <Button
+                variant="primary"
+                className="float-right"
+                onClick={handleShow}
+              >
+                Add Price List
+              </Button>
+            </Card.Title>
           </Card.Header>
-          <Card.Body>
-            
-          </Card.Body>
+          <Card.Body></Card.Body>
         </Card>
       </Col>
     </Row>
