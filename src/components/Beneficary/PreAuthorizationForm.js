@@ -6,7 +6,7 @@ function PreAuthorizationForm() {
   return (
     <Card>
       <Card.Header>
-        <Card.Title as="h4">Pre Authorization Info</Card.Title>
+        <Card.Title as="h4">Beneficary Pre Authorization Info</Card.Title>
       </Card.Header>
       <Card.Body>
         <Form>

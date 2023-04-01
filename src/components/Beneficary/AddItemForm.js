@@ -62,7 +62,9 @@ function AddItemForm() {
                 </Col>
                 <Col className="" md="3">
                   <Form.Group>
-                    <label class="form-check-label">Non Standard Description</label>
+                    <label class="form-check-label">
+                      Non Standard Description
+                    </label>
                     <Form.Control
                       placeholder="Non Standard Description"
                       type="text"
@@ -209,7 +211,9 @@ function AddItemForm() {
                 </Col>
                 <Col className="" md="2">
                   <Form.Group>
-                    <label className="form-check-label">Patient Share (%)</label>
+                    <label className="form-check-label">
+                      Patient Share (%)
+                    </label>
                     <Form.Control
                       placeholder="Enter Patient Share"
                       type="text"
