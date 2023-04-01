@@ -56,8 +56,8 @@ const dashboardRoutes = [
     hidden: true,
   },
   {
-    path: "/beneficary",
-    name: "Beneficary",
+    path: "/pre-auth",
+    name: "Pre-Auth",
     icon: "nc-icon nc-circle-09",
     component: Beneficary,
     layout: "/admin"
@@ -69,7 +69,7 @@ const dashboardRoutes = [
     icon: "nc-icon nc-circle-09",
     component: Beneficaries,
     layout: "/admin",
-    hidden: true,
+    hidden: false,
   },
   {
     path: "/reconciliation",

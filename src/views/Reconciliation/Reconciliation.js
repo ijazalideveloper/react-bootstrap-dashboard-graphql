@@ -24,39 +24,110 @@ function Reconciliation() {
             <Container fluid>
                 <Row>
                     <Col md="12">
-
                         <Card>
                             <Card.Header>
                                 <Card.Title as="h4">Reconciliation</Card.Title>
                             </Card.Header>
                             <Card.Body>
-                                <Table striped bordered hover size="sm">
-                                    <thead>
-                                        <tr>
-                                            <th>#</th>
-                                            <th>Batch number </th>
-                                            <th>Provider name </th>
-                                            <th>Provider number </th>
-                                            <th>Billing Month</th>
-                                            <th>Gross amount  </th>
-                                            <th>Net amount   </th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>Mark</td>
-                                            <td>Otto</td>
-                                            <td>@mdo</td>
-                                            <td>@mdo</td>
-                                            <td>@mdo</td>
-                                            <td>@mdo</td>
-                                        </tr>
+                                <div class="box">
+                                    <div className="mb-3 d-flex justify-content-end form-group">
+                                        <input
+                                            className="border rounded p-2 col-md-3"
+                                            type="text"
+                                            placeholder="Search.."
+                                        />
+                                    </div>
+                                    <div class="box-body table-responsive">
+                                        <table class="table table-bordered table-striped table-hover">
+                                            <tbody>
+                                                <tr>
+                                                    <th>#</th>
+                                                    <th>Batch number </th>
+                                                    <th>Provider name </th>
+                                                    <th>Provider number </th>
+                                                    <th>Billing Month</th>
+                                                    <th>Gross amount  </th>
+                                                    <th>Net amount   </th>
+                                                </tr>
 
-                                    </tbody>
-                                </Table>
+                                                <tr>
+                                                    <td>1.</td>
+                                                    <td>Install New Software</td>
+                                                    <td>
+                                                        <div class="progress progress-xs">
+                                                            <div class="progress-bar progress-bar-danger"></div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <span class="badge bg-red">55%</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="badge bg-red">55%</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="badge bg-red">55%</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="badge bg-red">55%</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1.</td>
+                                                    <td>Install New Software</td>
+                                                    <td>
+                                                        <div class="progress progress-xs">
+                                                            <div class="progress-bar progress-bar-danger"></div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <span class="badge bg-red">55%</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="badge bg-red">55%</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="badge bg-red">55%</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="badge bg-red">55%</span>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="box-footer clearfix">
+                                        <ul class="pagination d-flex justify-content-end">
+                                            <li class="page-item">
+                                                <a class="page-link" href="#">
+                                                    Previous
+                                                </a>
+                                            </li>
+                                            <li class="page-item">
+                                                <a class="page-link" href="#">
+                                                    1
+                                                </a>
+                                            </li>
+                                            <li class="page-item active">
+                                                <a class="page-link" href="#">
+                                                    2
+                                                </a>
+                                            </li>
+                                            <li class="page-item">
+                                                <a class="page-link" href="#">
+                                                    3
+                                                </a>
+                                            </li>
+                                            <li class="page-item">
+                                                <a class="page-link" href="#">
+                                                    Next
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </Card.Body>
                         </Card>
+
                     </Col>
                 </Row>
             </Container>

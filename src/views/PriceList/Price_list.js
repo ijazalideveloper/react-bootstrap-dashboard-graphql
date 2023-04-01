@@ -32,6 +32,10 @@ function PriceList() {
                             onHide={handleClose}
                             backdrop="static"
                             keyboard={false}
+                            className="addBeneficaryItemCustomClass"
+                            // dialogClassName="modal-90w"
+                            // fullscreen="xxl-down"
+                            size="md"
                         >
                             <Modal.Header closeButton>
                                 <Modal.Title>Add Price List</Modal.Title>
