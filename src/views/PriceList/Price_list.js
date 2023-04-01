@@ -143,37 +143,134 @@ function PriceList() {
                                 </Button></Card.Title>
                             </Card.Header>
                             <Card.Body>
-                                <Table striped bordered hover size="sm">
-                                    <thead>
-                                        <tr>
-                                            <th>#</th>
-                                            <th>First Name</th>
-                                            <th>Last Name</th>
-                                            <th>Username</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>Mark</td>
-                                            <td>Otto</td>
-                                            <td>@mdo</td>
-                                        </tr>
-                                        <tr>
-                                            <td>2</td>
-                                            <td>Jacob</td>
-                                            <td>Thornton</td>
-                                            <td>@fat</td>
-                                        </tr>
-                                        <tr>
-                                            <td>3</td>
-                                            <td colSpan={2}>Larry the Bird</td>
-                                            <td>@twitter</td>
-                                        </tr>
-                                    </tbody>
-                                </Table>
+                                <div class="box">
+                                    <div className="mb-3 d-flex justify-content-end form-group">
+                                        <input
+                                            className="border rounded p-2 col-md-3"
+                                            type="text"
+                                            placeholder="Search.."
+                                        />
+                                    </div>
+                                    <div class="box-body table-responsive">
+                                        <table class="table table-bordered table-striped table-hover">
+                                            <tbody>
+                                                <tr>
+                                                    <th>#</th>
+                                                    <th>Full Name</th>
+                                                    <th>Membership Number</th>
+                                                    <th>TOB Group Number</th>
+                                                    <th>National ID number</th>
+                                                    <th>Department / Occupation  </th>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td>1.</td>
+                                                    <td>Install New Software</td>
+                                                    <td>
+                                                        <div class="progress progress-xs">
+                                                            <div class="progress-bar progress-bar-danger"></div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <span class="badge bg-red">55%</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="badge bg-red">55%</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="badge bg-red">55%</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1.</td>
+                                                    <td>Install New Software</td>
+                                                    <td>
+                                                        <div class="progress progress-xs">
+                                                            <div class="progress-bar progress-bar-danger"></div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <span class="badge bg-red">55%</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="badge bg-red">55%</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="badge bg-red">55%</span>
+                                                    </td>
+                                                </tr><tr>
+                                                    <td>1.</td>
+                                                    <td>Install New Software</td>
+                                                    <td>
+                                                        <div class="progress progress-xs">
+                                                            <div class="progress-bar progress-bar-danger"></div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <span class="badge bg-red">55%</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="badge bg-red">55%</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="badge bg-red">55%</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1.</td>
+                                                    <td>Install New Software</td>
+                                                    <td>
+                                                        <div class="progress progress-xs">
+                                                            <div class="progress-bar progress-bar-danger"></div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <span class="badge bg-red">55%</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="badge bg-red">55%</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="badge bg-red">55%</span>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="box-footer clearfix">
+                                        <ul class="pagination d-flex justify-content-end">
+                                            <li class="page-item">
+                                                <a class="page-link" href="#">
+                                                    Previous
+                                                </a>
+                                            </li>
+                                            <li class="page-item">
+                                                <a class="page-link" href="#">
+                                                    1
+                                                </a>
+                                            </li>
+                                            <li class="page-item active">
+                                                <a class="page-link" href="#">
+                                                    2
+                                                </a>
+                                            </li>
+                                            <li class="page-item">
+                                                <a class="page-link" href="#">
+                                                    3
+                                                </a>
+                                            </li>
+                                            <li class="page-item">
+                                                <a class="page-link" href="#">
+                                                    Next
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </Card.Body>
                         </Card>
+
                     </Col>
                 </Row>
             </Container>
