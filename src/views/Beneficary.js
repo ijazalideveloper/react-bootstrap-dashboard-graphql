@@ -22,9 +22,10 @@ import {
   Col,
 } from "react-bootstrap";
 
-const Beneficary = () => {
+const Beneficary = (props) => {
   const { createNewBeneficaryField, onClickInsurancePlanFieldAdd } =
     BeneficaryHook();
+    const goBack = () => props.history.push("/admin/pre-auth-listing");
   return (
     <>
       <Container fluid>
@@ -32,6 +33,15 @@ const Beneficary = () => {
           <Col md="12">
             <Card>
               <Card.Header>
+              <Button
+                  // className="btn-fill float-left"
+                  className="btn btn-light mr-2 "
+                  type="submit"
+                  variant="info"
+                  onClick={() => goBack()}
+                >
+                  Back
+                </Button>
                 <Card.Title
                   as="h4"
                   className="d-flex justify-content-between align-items-center"

@@ -24,6 +24,7 @@ import PriceList from "views/PriceList/Price_list";
 import Beneficaries from "views/Beneficary/Beneficaries";
 import Reconciliation from "views/Reconciliation/Reconciliation";
 import AddProvider from './views/Providers/AddProvider';
+import PreAuth from "views/PreAuth/PreAuth";
 
 const dashboardRoutes = [
   {
@@ -56,11 +57,19 @@ const dashboardRoutes = [
     hidden: true,
   },
   {
-    path: "/pre-auth",
+    path: "/pre-auth-listing",
+    name: "Pre-Auth",
+    icon: "nc-icon nc-circle-09",
+    component: PreAuth,
+    layout: "/admin"
+  },
+  {
+    path: "/pre-auth-form",
     name: "Pre-Auth",
     icon: "nc-icon nc-circle-09",
     component: Beneficary,
-    layout: "/admin"
+    layout: "/admin",
+    hidden: true,
   },
 
   {
