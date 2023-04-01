@@ -1,17 +1,27 @@
 import React, { useState } from "react";
 // react-bootstrap components
-import { Button, Card, Form, Row, Col } from "react-bootstrap";
+import { Button, Card, Form, Row, Col,Modal } from "react-bootstrap";
 
 function AddItemForm() {
+  const [show, setShow] = useState(false);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
   return (
     <Row>
       <Col md="12">
-        <Card>
-          <Card.Header>
-            <Card.Title as="h4">Add Item</Card.Title>
-          </Card.Header>
-          <Card.Body>
-            <Form>
+        <Modal
+          show={show}
+          onHide={handleClose}
+          backdrop="static"
+          keyboard={false}
+          className=""
+        >
+          <Modal.Header closeButton>
+            <Modal.Title>Add Price List</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+          <Form>
               <Row>
                 <Col className="" md="3">
                   <Form.Group>
@@ -235,6 +245,22 @@ function AddItemForm() {
                 </Col>
               </Row>
             </Form>
+          </Modal.Body>
+          <Modal.Footer>
+            <Button variant="secondary" onClick={handleClose}>
+              Close
+            </Button>
+            <Button variant="primary">Understood</Button>
+          </Modal.Footer>
+        </Modal>
+        <Card>
+          <Card.Header>
+            <Card.Title as="h4">Add Item <Button variant="primary" className="float-right" onClick={handleShow}>
+                                    Add Price List
+                                </Button></Card.Title>
+          </Card.Header>
+          <Card.Body>
+            
           </Card.Body>
         </Card>
       </Col>
