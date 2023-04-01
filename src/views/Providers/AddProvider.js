@@ -11,7 +11,8 @@ import {
   Col,
 } from "react-bootstrap";
 
-function AddProvider() {
+function AddProvider(props) {
+  const goBack = () => props.history.push("/admin/providers");
   return (
     <>
       <Container fluid>
@@ -20,9 +21,11 @@ function AddProvider() {
             <Card>
               <Card.Header>
                 <Button
-                  className="btn-fill float-left"
+                  // className="btn-fill float-left"
+                  className="btn btn-light mr-2 "
                   type="submit"
                   variant="info"
+                  onClick={() => goBack()}
                 >
                   Back
                 </Button>

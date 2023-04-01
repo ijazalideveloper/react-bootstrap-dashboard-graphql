@@ -19,11 +19,11 @@ import Dashboard from "views/Dashboard.js";
 import UserProfile from "views/UserProfile.js";
 import Beneficary from './views/Beneficary';
 
-import AddProvider from "views/Providers/AddProvider";
 import Providers from "./views/Providers/Providers";
 import PriceList from "views/PriceList/Price_list";
 import Beneficaries from "views/Beneficary/Beneficaries";
 import Reconciliation from "views/Reconciliation/Reconciliation";
+import AddProvider from './views/Providers/AddProvider';
 
 const dashboardRoutes = [
   {
@@ -45,6 +45,13 @@ const dashboardRoutes = [
     name: "Providers",
     icon: "nc-icon nc-circle-09",
     component: Providers,
+    layout: "/admin"
+  },
+  {
+    path: "/addEditProviders",
+    name: "AddEditProviders",
+    icon: "nc-icon nc-circle-09",
+    component: AddProvider,
     layout: "/admin"
   },
   {

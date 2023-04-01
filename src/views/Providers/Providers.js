@@ -2,12 +2,14 @@ import React, { useState } from "react";
 
 // react-bootstrap components
 import { Card, Container, Row, Col, Table, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
-function Providers() {
+function Providers(props) {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
   return (
     <>
       <Container fluid>
@@ -17,9 +19,13 @@ function Providers() {
               <Card.Header>
                 <Card.Title as="h4">
                   Providers
-                  <Button variant="primary" className="float-right">
+                  {/* <Button variant="primary" className="float-right">
                     Add Provider
-                  </Button>
+                  </Button> */}
+                  <Link to="/admin/addEditProviders" className="btn btn-primary float-right">
+                    <i className="nc-icon nc-simple-add mr-2 font-weight-bold"></i>
+                    Add Provider
+                  </Link>
                 </Card.Title>
               </Card.Header>
               <Card.Body>
