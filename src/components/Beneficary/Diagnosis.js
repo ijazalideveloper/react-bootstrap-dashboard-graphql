@@ -72,7 +72,7 @@ function Diagnosis() {
                         <Form.Group>
                           <Col className="pr-1" md="12">
                             <select
-                              class="custom-select"
+                              className="custom-select"
                               id="gender2"
                               onChange={(e) => handleInputChange(e, i)}
                             >
@@ -86,7 +86,7 @@ function Diagnosis() {
                       <Col className="py-0" md="3">
                         <Form.Group>
                           <Col className="pr-1" md="12">
-                            <select class="custom-select" id="gender2">
+                            <select className="custom-select" id="gender2">
                               <option selected>Choose...</option>
                               <option value="1">Institution</option>
                               <option value="2">Institution 1</option>

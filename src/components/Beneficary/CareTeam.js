@@ -75,20 +75,20 @@ function CareTeamForm() {
                   <>
                     <Row>
                       <Col className="pr-1" md="3">
-                        <div class="input-group">
+                        <div className="input-group">
                           <input
                             type="text"
-                            class="form-control"
+                            className="form-control"
                             placeholder="Search this blog"
                             value={x.firstName}
                             onChange={(e) => handleInputChange(e, i)}
                           />
-                          <div class="input-group-append">
+                          <div className="input-group-append">
                             <button
-                              class="btn btn-secondary search_btn_beneficary border"
+                              className="btn btn-secondary search_btn_beneficary border"
                               type="button"
                             >
-                              <i class="fa fa-search"></i>
+                              <i className="fa fa-search"></i>
                             </button>
                           </div>
                         </div>
@@ -97,7 +97,7 @@ function CareTeamForm() {
                         <Form.Group>
                           <Col className="pr-1" md="12">
                             <select
-                              class="custom-select"
+                              className="custom-select"
                               id="gender2"
                               onChange={(e) => handleInputChange(e, i)}
                             >
@@ -111,7 +111,7 @@ function CareTeamForm() {
                       <Col className="py-0" md="3">
                         <Form.Group>
                           <Col className="pr-1" md="12">
-                            <select class="custom-select" id="gender2">
+                            <select className="custom-select" id="gender2">
                               <option selected>Choose...</option>
                               <option value="1">Institution</option>
                               <option value="2">Institution 1</option>
@@ -122,7 +122,7 @@ function CareTeamForm() {
                       <Col className="py-0" md="2">
                         <Form.Group>
                           <Col className="pr-1" md="12">
-                            <select class="custom-select" id="gender2">
+                            <select className="custom-select" id="gender2">
                               <option selected>Choose...</option>
                               <option value="1">Institution</option>
                               <option value="2">Institution 1</option>

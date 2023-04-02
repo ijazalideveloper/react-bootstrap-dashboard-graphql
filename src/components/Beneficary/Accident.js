@@ -34,8 +34,8 @@ function Accident() {
                 <Row>
                   <Col className="" md="4">
                     <Form.Group>
-                      <label class="form-check-label">Accident Type</label>
-                      <select class="custom-select" id="gender2">
+                      <label className="form-check-label">Accident Type</label>
+                      <select className="custom-select" id="gender2">
                         <option selected>Choose...</option>
                         <option value="1">Institution</option>
                         <option value="2">Institution 1</option>
@@ -73,9 +73,9 @@ function Accident() {
                   </Col>
                   <Col className="" md="4">
                     <Form.Group>
-                      <label class="form-check-label">Country</label>
+                      <label className="form-check-label">Country</label>
                       <Col className="" md="12">
-                        <select class="custom-select" id="gender2">
+                        <select className="custom-select" id="gender2">
                           <option selected>Choose...</option>
                           <option value="1">Institution</option>
                           <option value="2">Institution 1</option>

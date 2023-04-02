@@ -34,16 +34,16 @@ function AttachmentForm() {
         <Form>
           <Row className="d-flex align-items-center">
             <Col className="" md="1">
-              <div class="input-group">1</div>
+              <div className="input-group">1</div>
             </Col>
             <Col className="" md="2">
-              <div class="input-group">Birth Weight</div>
+              <div className="input-group">Birth Weight</div>
             </Col>
             <Col className="" md="2">
-              <div class="">
+              <div className="">
                 <input
                   type="text"
-                  class="form-control"
+                  className="form-control"
                   placeholder="Search this blog"
                 />
               </div>
@@ -51,15 +51,15 @@ function AttachmentForm() {
             <Col className="" md="2">
               <input
                 type="text"
-                class="form-control"
+                className="form-control"
                 placeholder="Search this blog"
               />
             </Col>
             <Col className="" md="2">
-              <div class="">
+              <div className="">
                 <input
                   type="text"
-                  class="form-control"
+                  className="form-control"
                   placeholder="Search this blog"
                 />
               </div>
@@ -78,16 +78,16 @@ function AttachmentForm() {
           </Row>
           <Row className="d-flex align-items-center">
             <Col className="" md="1">
-              <div class="input-group">1</div>
+              <div className="input-group">1</div>
             </Col>
             <Col className="" md="2">
-              <div class="input-group">Birth Weight</div>
+              <div className="input-group">Birth Weight</div>
             </Col>
             <Col className="" md="2">
-              <div class="">
+              <div className="">
                 <input
                   type="text"
-                  class="form-control"
+                  className="form-control"
                   placeholder="Search this blog"
                 />
               </div>
@@ -95,15 +95,15 @@ function AttachmentForm() {
             <Col className="" md="2">
               <input
                 type="text"
-                class="form-control"
+                className="form-control"
                 placeholder="Search this blog"
               />
             </Col>
             <Col className="" md="2">
-              <div class="">
+              <div className="">
                 <input
                   type="text"
-                  class="form-control"
+                  className="form-control"
                   placeholder="Search this blog"
                 />
               </div>
@@ -122,16 +122,16 @@ function AttachmentForm() {
           </Row>
           <Row className="d-flex align-items-center">
             <Col className="" md="1">
-              <div class="input-group">1</div>
+              <div className="input-group">1</div>
             </Col>
             <Col className="" md="2">
-              <div class="input-group">Birth Weight</div>
+              <div className="input-group">Birth Weight</div>
             </Col>
             <Col className="" md="2">
-              <div class="">
+              <div className="">
                 <input
                   type="text"
-                  class="form-control"
+                  className="form-control"
                   placeholder="Search this blog"
                 />
               </div>
@@ -139,15 +139,15 @@ function AttachmentForm() {
             <Col className="" md="2">
               <input
                 type="text"
-                class="form-control"
+                className="form-control"
                 placeholder="Search this blog"
               />
             </Col>
             <Col className="" md="2">
-              <div class="">
+              <div className="">
                 <input
                   type="text"
-                  class="form-control"
+                  className="form-control"
                   placeholder="Search this blog"
                 />
               </div>

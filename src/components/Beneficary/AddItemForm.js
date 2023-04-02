@@ -32,7 +32,7 @@ function AddItemForm() {
                   <Form.Group>
                     <label className="form-check-label">Type</label>
 
-                    <select class="custom-select" id="gender2">
+                    <select className="custom-select" id="gender2">
                       <option selected>Choose...</option>
                       <option value="1">Institution</option>
                       <option value="2">Institution 1</option>
@@ -41,10 +41,10 @@ function AddItemForm() {
                 </Col>
                 <Col className="" md="3">
                   <Form.Group>
-                    <label class="form-check-label">
+                    <label className="form-check-label">
                       Standard Code-Description
                     </label>
-                    <select class="custom-select" id="gender2">
+                    <select className="custom-select" id="gender2">
                       <option selected>Choose...</option>
                       <option value="1">Institution</option>
                       <option value="2">Institution 1</option>
@@ -53,7 +53,7 @@ function AddItemForm() {
                 </Col>
                 <Col className="" md="3">
                   <Form.Group>
-                    <label class="form-check-label">Non Standard Code</label>
+                    <label className="form-check-label">Non Standard Code</label>
                     <Form.Control
                       placeholder="Enter Non Standard Code"
                       type="text"
@@ -62,7 +62,7 @@ function AddItemForm() {
                 </Col>
                 <Col className="" md="3">
                   <Form.Group>
-                    <label class="form-check-label">
+                    <label className="form-check-label">
                       Non Standard Description
                     </label>
                     <Form.Control
@@ -75,9 +75,9 @@ function AddItemForm() {
               <Row className="mb-3">
                 <Col className="" md="3">
                   <Form.Group>
-                    <label class="form-check-label">Body Site</label>
+                    <label className="form-check-label">Body Site</label>
 
-                    <select class="custom-select" id="gender2">
+                    <select className="custom-select" id="gender2">
                       <option selected>Choose...</option>
                       <option value="1">Institution</option>
                       <option value="2">Institution 1</option>
@@ -86,9 +86,9 @@ function AddItemForm() {
                 </Col>
                 <Col className="" md="3">
                   <Form.Group>
-                    <label class="form-check-label">Sub Site</label>
+                    <label className="form-check-label">Sub Site</label>
 
-                    <select class="custom-select" id="gender2">
+                    <select className="custom-select" id="gender2">
                       <option selected>Choose...</option>
                       <option value="1">Institution</option>
                       <option value="2">Institution 1</option>
@@ -111,9 +111,9 @@ function AddItemForm() {
               <Row className="mb-3">
                 <Col className="" md="3">
                   <Form.Group>
-                    <label class="form-check-label">Supporting Info</label>
+                    <label className="form-check-label">Supporting Info</label>
 
-                    <select class="custom-select" id="gender2">
+                    <select className="custom-select" id="gender2">
                       <option selected>Choose...</option>
                       <option value="1">Institution</option>
                       <option value="2">Institution 1</option>
@@ -122,8 +122,8 @@ function AddItemForm() {
                 </Col>
                 <Col className="" md="3">
                   <Form.Group>
-                    <label class="form-check-label">Diagnosis</label>
-                    <select class="custom-select" id="gender2">
+                    <label className="form-check-label">Diagnosis</label>
+                    <select className="custom-select" id="gender2">
                       <option selected>Choose...</option>
                       <option value="1">Institution</option>
                       <option value="2">Institution 1</option>
@@ -132,8 +132,8 @@ function AddItemForm() {
                 </Col>
                 <Col className="" md="3">
                   <Form.Group>
-                    <label class="form-check-label">Care Team</label>
-                    <select class="custom-select" id="gender2">
+                    <label className="form-check-label">Care Team</label>
+                    <select className="custom-select" id="gender2">
                       <option selected>Choose...</option>
                       <option value="1">Institution</option>
                       <option value="2">Institution 1</option>
@@ -142,8 +142,8 @@ function AddItemForm() {
                 </Col>
                 <Col className="" md="3">
                   <Form.Group>
-                    <label class="form-check-label">Is Package?</label>
-                    <select class="custom-select" id="gender2">
+                    <label className="form-check-label">Is Package?</label>
+                    <select className="custom-select" id="gender2">
                       <option selected>Choose...</option>
                       <option value="1">Institution</option>
                       <option value="2">Institution 1</option>

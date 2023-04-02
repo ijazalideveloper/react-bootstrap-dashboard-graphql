@@ -13,7 +13,7 @@ function PreAuthorizationForm() {
           <Row>
             <Col md="4">
               <Form.Group>
-                <label class="form-check-label">Date Ordered</label>
+                <label className="form-check-label">Date Ordered</label>
                 <Form.Control
                   placeholder="Date Ordered"
                   type="date"
@@ -22,8 +22,8 @@ function PreAuthorizationForm() {
             </Col>
             <Col md="4">
               <Form.Group>
-                <label class="form-check-label">Type</label>
-                <select class="custom-select" id="gender2">
+                <label className="form-check-label">Type</label>
+                <select className="custom-select" id="gender2">
                   <option selected>Choose...</option>
                   <option value="1">Institution</option>
                   <option value="2">Institution 1</option>
@@ -32,8 +32,8 @@ function PreAuthorizationForm() {
             </Col>
             <Col md="4">
               <Form.Group>
-                <label class="form-check-label">Sub Type</label>
-                <select class="custom-select" id="gender2">
+                <label className="form-check-label">Sub Type</label>
+                <select className="custom-select" id="gender2">
                   <option selected>Choose...</option>
                   <option value="1">Out Patient</option>
                   <option value="2">Institution 1</option>
@@ -44,7 +44,7 @@ function PreAuthorizationForm() {
           <Row>
             <Col md="4">
               <Form.Group>
-                <label class="form-check-label">
+                <label className="form-check-label">
                   Eligibility Response Identifier(value)
                 </label>
                 <Form.Control
@@ -55,7 +55,7 @@ function PreAuthorizationForm() {
             </Col>
             <Col md="4">
               <Form.Group>
-                <label class="form-check-label">
+                <label className="form-check-label">
                   Eligibility Response Identifier (URL)
                 </label>
                 <Form.Control
@@ -66,7 +66,7 @@ function PreAuthorizationForm() {
             </Col>
             <Col md="4">
               <Form.Group>
-                <label class="form-check-label">Offline Eligibility ID</label>
+                <label className="form-check-label">Offline Eligibility ID</label>
                 <Form.Control
                   placeholder="Offline Eligibility ID"
                   type="text"
@@ -86,8 +86,8 @@ function PreAuthorizationForm() {
             </Col>
             <Col md="4">
               <Form.Group>
-                <label class="form-check-label">Payee Type</label>
-                <select class="custom-select" id="gender2">
+                <label className="form-check-label">Payee Type</label>
+                <select className="custom-select" id="gender2">
                   <option selected>Choose...</option>
                   <option value="1">Institution</option>
                   <option value="2">Institution 1</option>
@@ -96,8 +96,8 @@ function PreAuthorizationForm() {
             </Col>
             <Col md="4">
               <Form.Group>
-                <label class="form-check-label">Payee</label>
-                <select class="custom-select" id="gender2">
+                <label className="form-check-label">Payee</label>
+                <select className="custom-select" id="gender2">
                   <option selected>Choose...</option>
                   <option value="1">Institution</option>
                   <option value="2">Institution 1</option>
@@ -108,7 +108,7 @@ function PreAuthorizationForm() {
           <Row>
             <Col md="4">
               <Form.Group>
-                <label class="form-check-label">
+                <label className="form-check-label">
                   Related Preauthorization Refernce No(s)
                 </label>
                 <Form.Control
@@ -119,8 +119,8 @@ function PreAuthorizationForm() {
             </Col>
             <Col className="px-1" md="4">
               <Form.Group>
-                <label class="form-check-label">Referring provider</label>
-                <select class="custom-select" id="gender2">
+                <label className="form-check-label">Referring provider</label>
+                <select className="custom-select" id="gender2">
                   <option selected>Choose...</option>
                   <option value="1">Institution</option>
                   <option value="2">Institution 1</option>

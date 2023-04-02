@@ -67,17 +67,17 @@ const Beneficary = (props) => {
                   <Row>
                     <Col className="pr-1" md="5">
                       <Form.Group>
-                        <div class="form-check d-flex justify-content-start align-items-center">
+                        <div className="form-check d-flex justify-content-start align-items-center">
                           <input
                             style={{ marginTop: "-1px" }}
-                            class="form-check-input"
+                            className="form-check-input"
                             type="radio"
                             name="flexRadioDefault"
                             id="flexRadioDefault1"
                           />
                           <label
                             style={{ paddingLeft: "4px" }}
-                            class="form-check-label"
+                            className="form-check-label"
                             for="flexRadioDefault1"
                           >
                             {" "}
@@ -89,18 +89,18 @@ const Beneficary = (props) => {
                   </Row>
                   <Row className="justify-content-between">
                     <Col className="pr-1" md="5">
-                      <div class="input-group">
+                      <div className="input-group">
                         <input
                           type="text"
-                          class="form-control"
+                          className="form-control"
                           placeholder="Search this blog"
                         />
-                        <div class="input-group-append">
+                        <div className="input-group-append">
                           <button
-                            class="btn btn-secondary search_btn_beneficary border bg-light"
+                            className="btn btn-secondary search_btn_beneficary border bg-light"
                             type="button"
                           >
-                            <i class="fa fa-search"></i>
+                            <i className="fa fa-search"></i>
                           </button>
                         </div>
                       </div>
@@ -111,7 +111,7 @@ const Beneficary = (props) => {
                     >
                       <label
                         style={{ paddingLeft: "4px" }}
-                        class="form-check-label"
+                        className="form-check-label"
                         for="flexRadioDefault1"
                       >
                         {" "}
@@ -133,11 +133,11 @@ const Beneficary = (props) => {
                     <Row>
                       <Col className="pr-1" md="5">
                         <Form.Group>
-                          <label class="form-check-label">
+                          <label className="form-check-label">
                             Insurance Plans
                           </label>
                           <Col className="pr-1" md="12">
-                            <select class="custom-select" id="gender2">
+                            <select className="custom-select" id="gender2">
                               <option selected>Choose...</option>
                               <option value="1">Male</option>
                               <option value="2">Female</option>

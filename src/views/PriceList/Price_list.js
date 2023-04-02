@@ -48,8 +48,8 @@ function PriceList() {
                                             <Form.Group>
 
                                                 <Col className="pr-1" md="12">
-                                                    <label class="form-check-label">Type*</label>
-                                                    <select class="custom-select" id="gender2">
+                                                    <label className="form-check-label">Type*</label>
+                                                    <select className="custom-select" id="gender2">
                                                         <option selected>Choose...</option>
                                                         <option value="1">Male</option>
                                                         <option value="2">Female</option>
@@ -61,8 +61,8 @@ function PriceList() {
                                             <Form.Group>
 
                                                 <Col className="pr-1" md="12">
-                                                    <label class="form-check-label">Service Code*</label>
-                                                    <select class="custom-select" id="gender2">
+                                                    <label className="form-check-label">Service Code*</label>
+                                                    <select className="custom-select" id="gender2">
                                                         <option selected>Choose...</option>
                                                         <option value="1">Male</option>
                                                         <option value="2">Female</option>
@@ -143,7 +143,7 @@ function PriceList() {
                                 </Button></Card.Title>
                             </Card.Header>
                             <Card.Body>
-                                <div class="box">
+                                <div className="box">
                                     <div className="mb-3 d-flex justify-content-end form-group">
                                         <input
                                             className="border rounded p-2 col-md-3"
@@ -151,8 +151,8 @@ function PriceList() {
                                             placeholder="Search.."
                                         />
                                     </div>
-                                    <div class="box-body table-responsive">
-                                        <table class="table table-bordered table-striped table-hover">
+                                    <div className="box-body table-responsive">
+                                        <table className="table table-bordered table-striped table-hover">
                                             <tbody>
                                                 <tr>
                                                     <th>#</th>
@@ -168,100 +168,100 @@ function PriceList() {
                                                     <td>1.</td>
                                                     <td>Install New Software</td>
                                                     <td>
-                                                        <div class="progress progress-xs">
-                                                            <div class="progress-bar progress-bar-danger"></div>
+                                                        <div className="progress progress-xs">
+                                                            <div className="progress-bar progress-bar-danger"></div>
                                                         </div>
                                                     </td>
                                                     <td>
-                                                        <span class="badge bg-red">55%</span>
+                                                        <span className="badge bg-red">55%</span>
                                                     </td>
                                                     <td>
-                                                        <span class="badge bg-red">55%</span>
+                                                        <span className="badge bg-red">55%</span>
                                                     </td>
                                                     <td>
-                                                        <span class="badge bg-red">55%</span>
+                                                        <span className="badge bg-red">55%</span>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td>1.</td>
                                                     <td>Install New Software</td>
                                                     <td>
-                                                        <div class="progress progress-xs">
-                                                            <div class="progress-bar progress-bar-danger"></div>
+                                                        <div className="progress progress-xs">
+                                                            <div className="progress-bar progress-bar-danger"></div>
                                                         </div>
                                                     </td>
                                                     <td>
-                                                        <span class="badge bg-red">55%</span>
+                                                        <span className="badge bg-red">55%</span>
                                                     </td>
                                                     <td>
-                                                        <span class="badge bg-red">55%</span>
+                                                        <span className="badge bg-red">55%</span>
                                                     </td>
                                                     <td>
-                                                        <span class="badge bg-red">55%</span>
+                                                        <span className="badge bg-red">55%</span>
                                                     </td>
                                                 </tr><tr>
                                                     <td>1.</td>
                                                     <td>Install New Software</td>
                                                     <td>
-                                                        <div class="progress progress-xs">
-                                                            <div class="progress-bar progress-bar-danger"></div>
+                                                        <div className="progress progress-xs">
+                                                            <div className="progress-bar progress-bar-danger"></div>
                                                         </div>
                                                     </td>
                                                     <td>
-                                                        <span class="badge bg-red">55%</span>
+                                                        <span className="badge bg-red">55%</span>
                                                     </td>
                                                     <td>
-                                                        <span class="badge bg-red">55%</span>
+                                                        <span className="badge bg-red">55%</span>
                                                     </td>
                                                     <td>
-                                                        <span class="badge bg-red">55%</span>
+                                                        <span className="badge bg-red">55%</span>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td>1.</td>
                                                     <td>Install New Software</td>
                                                     <td>
-                                                        <div class="progress progress-xs">
-                                                            <div class="progress-bar progress-bar-danger"></div>
+                                                        <div className="progress progress-xs">
+                                                            <div className="progress-bar progress-bar-danger"></div>
                                                         </div>
                                                     </td>
                                                     <td>
-                                                        <span class="badge bg-red">55%</span>
+                                                        <span className="badge bg-red">55%</span>
                                                     </td>
                                                     <td>
-                                                        <span class="badge bg-red">55%</span>
+                                                        <span className="badge bg-red">55%</span>
                                                     </td>
                                                     <td>
-                                                        <span class="badge bg-red">55%</span>
+                                                        <span className="badge bg-red">55%</span>
                                                     </td>
                                                 </tr>
                                             </tbody>
                                         </table>
                                     </div>
-                                    <div class="box-footer clearfix">
-                                        <ul class="pagination d-flex justify-content-end">
-                                            <li class="page-item">
-                                                <a class="page-link" href="#">
+                                    <div className="box-footer clearfix">
+                                        <ul className="pagination d-flex justify-content-end">
+                                            <li className="page-item">
+                                                <a className="page-link" href="#">
                                                     Previous
                                                 </a>
                                             </li>
-                                            <li class="page-item">
-                                                <a class="page-link" href="#">
+                                            <li className="page-item">
+                                                <a className="page-link" href="#">
                                                     1
                                                 </a>
                                             </li>
-                                            <li class="page-item active">
-                                                <a class="page-link" href="#">
+                                            <li className="page-item active">
+                                                <a className="page-link" href="#">
                                                     2
                                                 </a>
                                             </li>
-                                            <li class="page-item">
-                                                <a class="page-link" href="#">
+                                            <li className="page-item">
+                                                <a className="page-link" href="#">
                                                     3
                                                 </a>
                                             </li>
-                                            <li class="page-item">
-                                                <a class="page-link" href="#">
+                                            <li className="page-item">
+                                                <a className="page-link" href="#">
                                                     Next
                                                 </a>
                                             </li>
