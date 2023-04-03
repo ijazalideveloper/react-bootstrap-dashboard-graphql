@@ -120,27 +120,27 @@ function AddProvider(props) {
               <div className="col">
                 <div className="row">
                   <div className="col-sm-4">
-                    <h2 className="mb-0 mt-0"><strong>Create Provider</strong></h2>
+                    <h4 className="mb-0 mt-0"><strong>Create Provider</strong></h4>
                   </div>
                 </div>
               </div>
               <div className="col-auto">
                 <button
-                  className="btn btn-light mr-2  "
+                  className="btn btn-light mr-2 btn-sm "
                   type="button"
                   onClick={() => goBack()}
                 >
                   Back
                 </button>
                 <button
-                  className="btn btn-secondary mr-2  btn-fill"
+                  className="btn btn-secondary mr-2 btn-sm btn-fill"
                   type="submit"
                   // disabled={disable}
                 >
                   Delete
                 </button>
                 <button
-                  className="btn btn-success mr-2  btn-fill"
+                  className="btn btn-success mr-2 btn-sm btn-fill"
                   type="submit"
                   // disabled={disable}
                   // disabled={isSubmitting}
@@ -178,7 +178,7 @@ function AddProvider(props) {
                   {({ isSubmitting, values, setFieldValue }) => (
                     <Form>
                       <Row>
-                        <Col className="" md="6">
+                        <Col className="" md="3">
                           <div className="form-group">
                             <label htmlFor="providerNumber">
                               Provider Number
@@ -196,7 +196,7 @@ function AddProvider(props) {
                             />
                           </div>
                         </Col>
-                        <Col className="" md="6">
+                        <Col className="" md="3">
                           <div className="form-group">
                             <label htmlFor="providerName">Provider Name</label>
                             <Field
@@ -212,9 +212,7 @@ function AddProvider(props) {
                             />
                           </div>
                         </Col>
-                      </Row>
-                      <Row>
-                        <Col className="" md="6">
+                        <Col className="" md="3">
                           <div className="form-group">
                             <label htmlFor="providerStartDate">
                               Start Date
@@ -232,7 +230,7 @@ function AddProvider(props) {
                             />
                           </div>
                         </Col>
-                        <Col className="" md="6">
+                        <Col className="" md="3">
                           <div className="form-group">
                             <label>End Date</label>
                             <Field
@@ -249,6 +247,7 @@ function AddProvider(props) {
                           </div>
                         </Col>
                       </Row>
+                      
                       <Row>
                         <Col className="" md="3">
                           <div className="form-group">

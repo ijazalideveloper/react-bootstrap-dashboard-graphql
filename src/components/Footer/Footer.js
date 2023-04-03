@@ -35,11 +35,7 @@ class Footer extends Component {
                   Company
                 </a>
               </li>
-              <li>
-                <a href="#pablo" onClick={(e) => e.preventDefault()}>
-                  Portfolio
-                </a>
-              </li>
+              
               <li>
                 <a href="#pablo" onClick={(e) => e.preventDefault()}>
                   Blog
@@ -48,7 +44,7 @@ class Footer extends Component {
             </ul>
             <p className="copyright text-center">
               © {new Date().getFullYear()}{" "}
-              <a href="http://www.creative-tim.com">Creative Tim</a>, made with
+              <a href="#">Kode4EveryOne</a>, made with
               love for a better web
             </p>
           </nav>

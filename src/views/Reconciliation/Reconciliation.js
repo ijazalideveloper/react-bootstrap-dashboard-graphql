@@ -15,23 +15,7 @@ function Reconciliation() {
                 <strong>Reconciliation</strong>
               </h2>
             </div>
-            <div className="col-auto">
-              <Link
-                to="/admin/addEditProviders"
-                className="btn btn-fill  btn-primary"
-              >
-                <i className="nc-icon nc-simple-add mr-2"></i>
-                Add Beneficary
-              </Link>
-              {/* <br />
-                <br />
-                <input
-                  className="form-control"
-                  placeholder="search classes"
-                  classtype="text"
-                  name="search"
-                /> */}
-            </div>
+            
           </div>
           {/* <Card> */}
           {/* <Card.Header>

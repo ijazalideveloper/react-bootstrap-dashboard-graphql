@@ -28,7 +28,7 @@ function Beneficaries() {
           <div className="d-flex mb-3" style={{ width: "100%" }}>
             <div className="col">
               <h2 className="mb-0 mt-0">
-                <strong>Reconciliation</strong>
+                <strong>Beneficary</strong>
               </h2>
             </div>
             <div className="col-auto">
