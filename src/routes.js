@@ -25,7 +25,7 @@ import Beneficaries from "views/Beneficary/Beneficaries";
 import Reconciliation from "views/Reconciliation/Reconciliation";
 import AddProvider from './views/Providers/AddProvider';
 import PreAuth from "views/PreAuth/PreAuth";
-
+import Claims from "views/Claims/Claims";
 const dashboardRoutes = [
   {
     path: "/dashboard",
@@ -85,6 +85,13 @@ const dashboardRoutes = [
     name: "Reconciliation",
     icon: "nc-icon nc-circle-09",
     component: Reconciliation,
+    layout: "/admin"
+  },
+  {
+    path: "/claims",
+    name: "claims",
+    icon: "nc-icon nc-circle-09",
+    component: Claims,
     layout: "/admin"
   },
 
